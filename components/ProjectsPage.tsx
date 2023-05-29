@@ -1,5 +1,4 @@
-import Carousel from "./Carousel.tsx";
-import Scroller from "./Scroller.tsx";
+import Carousel from "../islands/Carousel.tsx";
 
 export default function ProjectsPage() {
   return (

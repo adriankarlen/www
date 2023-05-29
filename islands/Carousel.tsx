@@ -8,23 +8,23 @@ import IconCircleChevronsLeft from "https://deno.land/x/tabler_icons_tsx@0.0.3/t
 const SLIDE_DATA = [
   {
     color: "bg-green-300",
-    text: "slide one",
-    url: asset("/illustration/deno-plush.svg"),
+    text: "Project one",
+    url: asset("projects/deno-plush.svg"),
   },
   {
     color: "bg-yellow-300",
-    text: "slide two",
-    url: asset("/illustration/lemon-squash.svg"),
+    text: "Project two",
+    url: asset("projects/lemon-squash.svg"),
   },
   {
     color: "bg-blue-300",
-    text: "slide three",
-    url: asset("/illustration/deno-plush.svg"),
+    text: "Project three",
+    url: asset("projects/deno-plush.svg"),
   },
   {
     color: "bg-yellow-300",
-    text: "slide four",
-    url: asset("/illustration/lemon-squash.svg"),
+    text: "Project four",
+    url: asset("projects/lemon-squash.svg"),
   },
 ];
 
@@ -45,7 +45,7 @@ const Slide = (props: SlideProps) => {
   return (
     <div
       key={key}
-      class={`${props.class} ${color} h-80 w-full text-center text-black p-5`}
+      class={`${props.class} ${color} h-80 w-full text-center text-white font-semibold p-5`}
     >
       {text}
       <img src={url} />
@@ -74,9 +74,10 @@ const Carousel = (props: CarouselProps) => {
   const slideClasses = (idx = 0) => {
     let outgoingSlide = currentSlide.value - 1;
     let incomingSlide = currentSlide.value + 1;
+
     if (outgoingSlide === -1) outgoingSlide = SLIDE_DATA.length - 1;
     if (incomingSlide === SLIDE_DATA.length) incomingSlide = 0;
-    // console.log(outgoingSlide, currentSlide.value, incomingSlide)
+
     const TRANSITION_CLASS = () => {
       if (currentSlide.value === idx) return "translate-x-0 z-20";
       if (incomingSlide === idx) return "translate-x-full z-10";

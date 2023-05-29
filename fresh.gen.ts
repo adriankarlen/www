@@ -4,16 +4,18 @@
 
 import config from "./deno.json" assert { type: "json" };
 import * as $0 from "./routes/index.tsx";
-import * as $$0 from "./islands/ColorMode.tsx";
-import * as $$1 from "./islands/LinkGroup.tsx";
+import * as $$0 from "./islands/Carousel.tsx";
+import * as $$1 from "./islands/ColorMode.tsx";
+import * as $$2 from "./islands/LinkGroup.tsx";
 
 const manifest = {
   routes: {
     "./routes/index.tsx": $0,
   },
   islands: {
-    "./islands/ColorMode.tsx": $$0,
-    "./islands/LinkGroup.tsx": $$1,
+    "./islands/Carousel.tsx": $$0,
+    "./islands/ColorMode.tsx": $$1,
+    "./islands/LinkGroup.tsx": $$2,
   },
   baseUrl: import.meta.url,
   config,
