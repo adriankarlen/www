@@ -7,13 +7,13 @@ import IconPlus from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/plus.tsx";
 
 import ColorMode from "./ColorMode.tsx";
 
-interface LinkGroupProps {
+interface MenuProps {
   github: string;
   email: string;
   linkedin: string;
 }
 
-export default function LinkGroup(props: LinkGroupProps) {
+export default function Menu(props: MenuProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {

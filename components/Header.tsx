@@ -1,4 +1,4 @@
-import LinkGroup from "../islands/LinkGroup.tsx";
+import Menu from "../islands/Menu.tsx";
 import Greeting from "./Greeting.tsx";
 import Scroller from "./Scroller.tsx";
 
@@ -15,7 +15,7 @@ export default function Header(props: HeaderProps) {
           <h2 class="text-lg font-thin">Software Engineer</h2>
         </div>
         <div class="flex flex-col">
-          <LinkGroup
+          <Menu
             email="mailto:akarlen@pm.me"
             github="https://github.com/adriankarlen"
             linkedin="https://www.linkedin.com/in/adrian-karlen/"
