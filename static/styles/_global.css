@@ -1,0 +1,116 @@
+@layer base {
+    :root {
+        --color-primary: 114 135 253;
+        --color-secondary: 230 69 83;
+    }
+    :root[class='dark'] {
+        --color-primary: 180 190 254;
+        --color-secondary: 235 160 172;
+
+        *::-webkit-scrollbar-track {
+            background: #1e1e2e;
+        }
+
+        *::-webkit-scrollbar-thumb {
+            background: #7f849c;
+        }
+
+        *::-webkit-scrollbar-thumb:hover {
+            background: #a6adc8;
+        }
+        ::selection {
+            background-color: #b4befe;
+            color: #fff;
+        }
+    }
+}
+
+html,
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    overflow-x: hidden;
+    background-color: #eff1f5;
+    color: #4c4f69;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+main {
+    flex: 1;
+}
+
+@media (hover: none) {
+    * {
+        box-sizing: border-box;
+        -webkit-touch-callout: none;
+        -webkit-user-select: none;
+        -khtml-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+
+    input,
+    input::after,
+    input::before {
+        -webkit-touch-callout: initial;
+        -webkit-user-select: initial;
+        -khtml-user-select: initial;
+        -moz-user-select: initial;
+        -ms-user-select: initial;
+        user-select: initial;
+    }
+
+    *::-webkit-scrollbar {
+        display: none;
+    }
+
+    * {
+        scrollbar-width: none;
+    }
+}
+
+*::-webkit-scrollbar {
+    width: 0.75rem;
+    height: 0.75rem;
+}
+
+*::-webkit-scrollbar-track {
+    background: #eff1f5;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: #8c8fa1;
+    transition: background 0.2s ease-in-out;
+    border-radius: 0.95rem;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background: #6c6f85;
+}
+
+::selection {
+    background-color: #7287fd;
+    color: #cdd6f4;
+}
+
+button:focus {
+    outline: none !important;
+}
+
+a {
+    color: inherit;
+    text-decoration-line: none;
+}

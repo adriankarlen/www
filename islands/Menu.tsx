@@ -62,7 +62,7 @@ export default function Menu(props: MenuProps) {
         >
           <IconBrandLinkedin />
         </a>
-        <ColorMode initColorMode="dark" />
+        <ColorMode />
       </div>
     </div>
   );
