@@ -11,17 +11,17 @@ export default function AboutPage() {
   return (
     <div
       id="about"
-      className="flex flex-col items-center justify-between flex-grow"
+      class="flex flex-col items-center h-screen p-4"
     >
       <div
         id="content"
-        className="flex flex-wrap justify-center items-center w-full md:w-2/3 p-4"
+        class="flex flex-wrap w-full md:w-2/3 p-4 flex-grow"
       >
-        <div className="w-full md:w-1/3 p-4">
-          <label className="text-lg font-thin">About Me</label>
+        <div class="w-full md:w-1/3 p-4">
+          <label class="text-lg font-thin">About Me</label>
         </div>
-        <div className="w-full md:w-2/3 p-4">
-          <p className="text-3xl font-semibold">
+        <div class="w-full md:w-2/3 p-4">
+          <p class="md:text-3xl text-lg font-medium">
             My name is Adrian Karlén and I am a 29-year-old software developer
             based in Stockholm. My main focus is web development and I have
             previous work experience with technologies such as React, PHP,
@@ -31,33 +31,33 @@ export default function AboutPage() {
             am currently working as a consultant at Viati.
           </p>
         </div>
-        <div className="w-full md:w-1/3 p-4">
-          <label className="text-lg font-thin">Skills</label>
+        <div class="w-full md:w-1/3 p-4">
+          <label class="text-lg font-thin">Skills</label>
         </div>
-        <div className="w-full md:w-2/3 p-4 flex">
+        <div class="w-full md:w-2/3 p-4 flex">
           <Skills>
-            <div className="rounded-full border-blue-500 border-4 p-4 flex items-center justify-center w-24 h-24 hover:scale-105 transition-transform duration-300">
-              <IconBrandReact className="min-w-full min-h-full" stroke={1} />
+            <div class="rounded-full border-blue-500 md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300">
+              <IconBrandReact class="min-w-full min-h-full" stroke={1} />
             </div>
-            <div className="rounded-full border-blue-500 border-4 p-4 flex items-center justify-center w-24 h-24 hover:scale-105 transition-transform duration-300">
-              <IconBrandCSharp className="min-w-full min-h-full" stroke={1} />
+            <div class="rounded-full border-pink-500 md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300">
+              <IconBrandCSharp class="min-w-full min-h-full" stroke={1} />
             </div>
-            <div className="rounded-full border-blue-500 border-4 p-4 flex items-center justify-center w-24 h-24 hover:scale-105 transition-transform duration-300">
+            <div class="rounded-full border-red-500 md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300">
               <IconBrandTypescript
-                className="min-w-full min-h-full"
+                class="min-w-full min-h-full"
                 stroke={1}
               />
             </div>
-            <div className="rounded-full border-blue-500 border-4 p-4 flex items-center justify-center w-24 h-24 hover:scale-105 transition-transform duration-300">
-              <IconBrandPhp className="min-w-full min-h-full" stroke={1} />
+            <div class="rounded-full border-green-500 md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300">
+              <IconBrandPhp class="min-w-full min-h-full" stroke={1} />
             </div>
-            <div className="rounded-full border-blue-500 border-4 p-4 flex items-center justify-center w-24 h-24 hover:scale-105 transition-transform duration-300">
-              <IconBrandPython className="min-w-full min-h-full" stroke={1} />
+            <div class="rounded-full border-yellow-500 md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300">
+              <IconBrandPython class="min-w-full min-h-full" stroke={1} />
             </div>
           </Skills>
         </div>
       </div>
-      <div className="flex flex-col items-center justify-end h-10">
+      <div class="flex flex-col items-center justify-center h-10">
         <Scroller href="#projects" />
       </div>
     </div>

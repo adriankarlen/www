@@ -7,8 +7,8 @@ interface SkillsProps {
 
 export default function Skills(props: SkillsProps) {
   return (
-    <div className="flex justify-center">
-      <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 md:grid-cols-5 lg:grid-cols-5">
+    <div class="flex justify-center">
+      <div class="grid grid-cols-5 gap-10 sm:grid-cols-5 md:grid-cols-5 lg:grid-cols-5">
         {props.children}
       </div>
     </div>

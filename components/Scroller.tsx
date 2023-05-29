@@ -18,7 +18,7 @@ export default function Scroller(props: ScrollerProps) {
     <a
       href={props.href}
       onClick={handleScroll}
-      className="hover:scale-110 transition-transform duration-300 animate-pulse"
+      class="hover:scale-110 transition-transform duration-300 animate-pulse"
     >
       <IconChevronsDown />
     </a>
