@@ -1,5 +1,5 @@
 import { useRef } from "preact/hooks";
-import IconChevronsDown from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/chevrons-down.tsx";
+import IconChevronsDown from "@tabler/icons/chevrons-down.tsx";
 
 interface ScrollerProps {
   href: string;

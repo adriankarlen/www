@@ -1,9 +1,9 @@
-import { useState } from "preact/hooks";
-import IconBrandGithub from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-github.tsx";
-import IconBrandLinkedin from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-linkedin.tsx";
-import IconMail from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/mail.tsx";
-import IconMenu2 from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/menu-2.tsx";
-import IconPlus from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/plus.tsx";
+import { useEffect, useState } from "preact/hooks";
+import IconBrandGithub from "@tabler/icons/brand-github.tsx";
+import IconBrandLinkedin from "@tabler/icons/brand-linkedin.tsx";
+import IconMail from "@tabler/icons/mail.tsx";
+import IconMenu2 from "@tabler/icons/menu-2.tsx";
+import IconPlus from "@tabler/icons/plus.tsx";
 
 import ColorMode from "./ColorMode.tsx";
 
@@ -19,6 +19,18 @@ export default function Menu(props: MenuProps) {
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+
+  useEffect(() => {
+    const handleMenuClick = () => {
+      (document.activeElement as HTMLElement)?.blur();
+    };
+
+    document.addEventListener("click", handleMenuClick);
+
+    return () => {
+      document.removeEventListener("click", handleMenuClick);
+    };
+  }, []);
 
   return (
     <div class="flex flex-col md:flex-row">

@@ -1,26 +1,39 @@
+import { asset } from "$fresh/runtime.ts";
 import Carousel from "../islands/Carousel.tsx";
+
+const SLIDE_DATA = [
+  {
+    color: "bg-green-300",
+    text: "Project one",
+    url: asset("projects/deno-plush.svg"),
+  },
+  {
+    color: "bg-yellow-300",
+    text: "Project two",
+    url: asset("projects/lemon-squash.svg"),
+  },
+  {
+    color: "bg-blue-300",
+    text: "Project three",
+    url: asset("projects/deno-plush.svg"),
+  },
+  {
+    color: "bg-yellow-300",
+    text: "Project four",
+    url: asset("projects/lemon-squash.svg"),
+  },
+];
 
 export default function ProjectsPage() {
   return (
-    <div
-      id="projects"
-      class="flex flex-col items-center h-screen p-4"
-    >
+    <div id="projects" class="flex flex-col h-screen p-4">
       <div
         id="content"
-        class="flex flex-wrap flex-grow w-full md:w-2/3 p-4"
+        class="flex flex-wrap flex-grow w-full p-4 justify-center items-center"
       >
-        <div class="w-full md:w-1/3 p-4">
-          <label class="text-lg font-thin">Projects</label>
-        </div>
-        <div class="w-full md:w-2/3 p-4">
-          <p class="md:text-3xl text-sm font-medium">
-            I have worked on a number of projects, both professionally and
-            privately. Here are some of the projects I have worked on.
-          </p>
-        </div>
+        <h2 class="text-6xl font-bold">Projects</h2>
         <div class="w-full p-4">
-          <Carousel />
+          <Carousel slideData={SLIDE_DATA} />
         </div>
       </div>
     </div>

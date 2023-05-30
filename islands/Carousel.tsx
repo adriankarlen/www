@@ -1,41 +1,19 @@
 import { tw } from "twind";
-import { asset } from "$fresh/runtime.ts";
 import { useSignal } from "@preact/signals";
 import { useEffect, useRef } from "preact/hooks";
-import IconCircleChevronsRight from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/circle-chevrons-right.tsx";
-import IconCircleChevronsLeft from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/circle-chevrons-left.tsx";
+import IconCircleChevronsRight from "@tabler/icons/circle-chevrons-right.tsx";
+import IconCircleChevronsLeft from "@tabler/icons/circle-chevrons-left.tsx";
 
-const SLIDE_DATA = [
-  {
-    color: "bg-green-300",
-    text: "Project one",
-    url: asset("projects/deno-plush.svg"),
-  },
-  {
-    color: "bg-yellow-300",
-    text: "Project two",
-    url: asset("projects/lemon-squash.svg"),
-  },
-  {
-    color: "bg-blue-300",
-    text: "Project three",
-    url: asset("projects/deno-plush.svg"),
-  },
-  {
-    color: "bg-yellow-300",
-    text: "Project four",
-    url: asset("projects/lemon-squash.svg"),
-  },
-];
+type SlideData = {
+  color: string;
+  text: string;
+  url: string;
+};
 
 type SlideProps = {
   class?: string;
   key?: number;
-  data: {
-    color: string;
-    text: string;
-    url: string;
-  };
+  data: SlideData;
 };
 
 const Slide = (props: SlideProps) => {
@@ -45,15 +23,16 @@ const Slide = (props: SlideProps) => {
   return (
     <div
       key={key}
-      class={`${props.class} ${color} h-80 w-full text-center text-white font-semibold p-5`}
+      class={`flex flex-col items-center ${props.class} ${color} h-80 w-full text-center text-white font-semibold p-5`}
     >
       {text}
-      <img src={url} />
+      <img src={url} class="self-center" />
     </div>
   );
 };
 
 type CarouselProps = {
+  slideData: SlideData[];
   showNavigation?: boolean;
   interval?: number;
   currentSlide?: number;
@@ -75,8 +54,8 @@ const Carousel = (props: CarouselProps) => {
     let outgoingSlide = currentSlide.value - 1;
     let incomingSlide = currentSlide.value + 1;
 
-    if (outgoingSlide === -1) outgoingSlide = SLIDE_DATA.length - 1;
-    if (incomingSlide === SLIDE_DATA.length) incomingSlide = 0;
+    if (outgoingSlide === -1) outgoingSlide = props.slideData.length - 1;
+    if (incomingSlide === props.slideData.length) incomingSlide = 0;
 
     const TRANSITION_CLASS = () => {
       if (currentSlide.value === idx) return "translate-x-0 z-20";
@@ -88,7 +67,7 @@ const Carousel = (props: CarouselProps) => {
   };
 
   const nextSlide = () => {
-    if (SLIDE_DATA.length === currentSlide.value + 1) {
+    if (props.slideData.length === currentSlide.value + 1) {
       currentSlide.value = 0;
     } else {
       currentSlide.value++;
@@ -97,7 +76,7 @@ const Carousel = (props: CarouselProps) => {
 
   const previousSlide = () => {
     if (currentSlide.value === 0) {
-      currentSlide.value = SLIDE_DATA.length - 1;
+      currentSlide.value = props.slideData.length - 1;
     } else {
       currentSlide.value--;
     }
@@ -146,7 +125,7 @@ const Carousel = (props: CarouselProps) => {
     <div
       class={"slide_nav z-30 w-full absolute bottom-0 flex justify-center cursor-pointer"}
     >
-      {SLIDE_DATA.map((_item, idx) => {
+      {props.slideData.map((_item, idx) => {
         return (
           <div
             class={`px-1 ${NAVIGATION_COLOR}`}
@@ -165,7 +144,7 @@ const Carousel = (props: CarouselProps) => {
   return (
     <div
       ref={slideshowRef}
-      class={`slideshow relative flex-1 flex-end p-0 overflow-hidden ${
+      class={`slideshow relative flex-1 flex-end p-0 overflow-hidden rounded-lg ${
         props.class !== undefined ? props.class : ""
       }`}
       tabIndex={0}
@@ -180,7 +159,7 @@ const Carousel = (props: CarouselProps) => {
         style="top: calc(50% - 20px)"
         onClick={() => chevronClick(nextSlide)}
       />
-      {SLIDE_DATA.map((item, idx) => (
+      {props.slideData.map((item, idx) => (
         <Slide
           data={item}
           key={idx}
@@ -190,7 +169,7 @@ const Carousel = (props: CarouselProps) => {
       {SHOW_NAVIGATION &&
         <DotsNavigation />}
       <Slide
-        data={SLIDE_DATA[0]}
+        data={props.slideData[0]}
         class="opacity-0 pointer-events-none"
       />
     </div>

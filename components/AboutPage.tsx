@@ -1,11 +1,10 @@
 import Skills from "./Skills.tsx";
-import Scroller from "./Scroller.tsx";
 
-import IconBrandReact from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-react.tsx";
-import IconBrandCSharp from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-c-sharp.tsx";
-import IconBrandTypescript from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-typescript.tsx";
-import IconBrandPhp from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-php.tsx";
-import IconBrandPython from "https://deno.land/x/tabler_icons_tsx@0.0.3/tsx/brand-python.tsx";
+import IconBrandReact from "@tabler/icons/brand-react.tsx";
+import IconBrandCSharp from "@tabler/icons/brand-c-sharp.tsx";
+import IconBrandTypescript from "@tabler/icons/brand-typescript.tsx";
+import IconBrandPhp from "@tabler/icons/brand-php.tsx";
+import IconBrandPython from "@tabler/icons/brand-python.tsx";
 
 export default function AboutPage() {
   return (
@@ -56,9 +55,6 @@ export default function AboutPage() {
             </div>
           </Skills>
         </div>
-      </div>
-      <div class="flex flex-col items-center justify-center h-10">
-        <Scroller href="#projects" />
       </div>
     </div>
   );
