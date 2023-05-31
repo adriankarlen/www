@@ -5,7 +5,7 @@ import IconCircleChevronsRight from "@tabler/icons/circle-chevrons-right.tsx";
 import IconCircleChevronsLeft from "@tabler/icons/circle-chevrons-left.tsx";
 
 type SlideData = {
-  color: string;
+  bgImage: string;
   text: string;
   url: string;
 };
@@ -18,15 +18,19 @@ type SlideProps = {
 
 const Slide = (props: SlideProps) => {
   const { key, data } = props;
-  const { color, text, url } = data;
+  const { bgImage, text, url } = data;
   if (props.class === undefined) props.class = "";
   return (
     <div
       key={key}
-      class={`flex flex-col items-center ${props.class} ${color} h-80 w-full text-center text-white font-semibold p-5`}
+      class={`flex flex-col items-center ${props.class} w-full h-full text-center text-white font-semibold`}
     >
-      {text}
-      <img src={url} class="self-center" />
+      <div class="absolute top-4 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-[#313244] rounded-full">
+        <span class="text-md font-bold text-[#cdd6f4]">{text}</span>
+      </div>
+      <a href={url} target="_blank">
+        <img src={bgImage} class="self-center object-cover w-full h-full" />
+      </a>
     </div>
   );
 };
@@ -41,7 +45,8 @@ type CarouselProps = {
 };
 
 const Carousel = (props: CarouselProps) => {
-  const NAVIGATION_COLOR = `hover:text-gray-300 text-white`;
+  const NAVIGATION_COLOR =
+    `hover:text-[#6c6f85] dark:hover:text-[#a6adc8] text-[#4c4f69] dark:text-[#cdd6f4]`;
   const CHEVRON_STYLE =
     `absolute z-30 w-10 h-10 ${NAVIGATION_COLOR} cursor-pointer`;
   const SHOW_NAVIGATION = props.showNavigation === false ? false : true;

@@ -1,5 +1,6 @@
-import AboutPage from "../components/AboutPage.tsx";
-import Header from "../components/Header.tsx";
+import AboutPage from "../islands/AboutPage.tsx";
+import FloatingBox from "../islands/FloatingBox.tsx";
+import Header from "../islands/Header.tsx";
 import ProjectsPage from "../components/ProjectsPage.tsx";
 
 export default function Home() {
@@ -8,9 +9,10 @@ export default function Home() {
       <header class="p-4 mx-auto max-w-screen-2xl h-screen flex flex-col justify-between">
         <Header name="Adrian Karlen" />
       </header>
-      <main class="mx-auto max-w-screen-2xl min-h-screen flex flex-col justify-between overflow-y-auto scroll-snap-type-y scroll-behavior-smooth">
+      <main class="mx-auto max-w-screen-2xl min-h-screen flex flex-col justify-between">
         <AboutPage />
         <ProjectsPage />
+        <FloatingBox />
       </main>
     </>
   );

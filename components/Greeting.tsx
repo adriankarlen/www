@@ -1,8 +1,12 @@
 import HoverImage from "../components/HoverImage.tsx";
 
-export default function Greeting() {
+interface GreetingProps {
+  class: string;
+}
+
+export default function Greeting(props: GreetingProps) {
   return (
-    <div class="flex flex-col items-center justify-center">
+    <div class={`${props.class} flex flex-col items-center justify-center`}>
       <h1 class="text-4xl md:text-8xl mx-auto font-bold">
         Hi, my name is{" "}
         <span class="text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">

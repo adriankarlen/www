@@ -47,7 +47,7 @@ export default function ColorMode() {
 
   return (
     <button
-      class={`rounded-full px-2 py-1 md:border(gray-100 2) focus:outline-none hover:bg-gray-200 w-12 h-12 flex items-center justify-center transition-colors ${
+      class={`rounded-full px-2 py-1 md:border-2 md:border-[#acb0be] dark:md:border-[#585b70] focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center transition-colors ${
         state.value === "dark" ? "bg-dark" : "bg-light"
       }`}
       onClick={handleClick}

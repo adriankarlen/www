@@ -3,24 +3,14 @@ import Carousel from "../islands/Carousel.tsx";
 
 const SLIDE_DATA = [
   {
-    color: "bg-green-300",
-    text: "Project one",
-    url: asset("projects/deno-plush.svg"),
+    bgImage: asset("projects/personal-website.webp"),
+    text: "Personal website",
+    url: "https://github.com/adriankarlen/www",
   },
   {
-    color: "bg-yellow-300",
-    text: "Project two",
-    url: asset("projects/lemon-squash.svg"),
-  },
-  {
-    color: "bg-blue-300",
-    text: "Project three",
-    url: asset("projects/deno-plush.svg"),
-  },
-  {
-    color: "bg-yellow-300",
-    text: "Project four",
-    url: asset("projects/lemon-squash.svg"),
+    bgImage: asset("projects/_sushi.webp"),
+    text: "_sushi startpage",
+    url: "https://github.com/adriankarlen/_sushi",
   },
 ];
 
@@ -31,8 +21,16 @@ export default function ProjectsPage() {
         id="content"
         class="flex flex-wrap flex-grow w-full p-4 justify-center items-center"
       >
-        <h2 class="text-6xl font-bold">Projects</h2>
-        <div class="w-full p-4">
+        <div class="w-full flex flex-col">
+          <h2 class="p-2 text-4xl md:text-6xl font-bold mx-auto text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary">
+            Projects
+          </h2>
+          <p class="p-2 text-lg md:text-xl font-light mx-auto">
+            Here are some of my projects. By clicking on the images you will be
+            redirected to the GitHub repository.
+          </p>
+        </div>
+        <div class="w-full shadow-xl shadow-red rounded-lg">
           <Carousel slideData={SLIDE_DATA} />
         </div>
       </div>

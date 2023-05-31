@@ -1,4 +1,3 @@
-import { JSX } from "preact/jsx-runtime";
 import type { ComponentChildren } from "preact";
 
 interface SkillsProps {
