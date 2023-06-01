@@ -52,19 +52,17 @@ export default function Menu(props: MenuProps) {
         </div>
       </button>
       <div
-        class={`flex flex-col gap-0 md:flex-row md:gap-4 md:ml- ${
+        class={`flex flex-col gap-0 md:flex-row md:gap-4 ${
           isMenuOpen ? "xs:block" : "hidden md:flex"
         } transition-all duration-300`}
       >
-        <Tooltip text="GitHub">
-          <a
-            class="rounded-full px-2 py-1 md:border-2 md:border-[#acb0be] dark:md:border-[#585b70] focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center"
-            href={props.github}
-            target="_blank"
-          >
-            <IconBrandGithub />
-          </a>
-        </Tooltip>
+        <a
+          class="rounded-full px-2 py-1 md:border-2 md:border-[#acb0be] dark:md:border-[#585b70] focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center"
+          href={props.github}
+          target="_blank"
+        >
+          <IconBrandGithub />
+        </a>
         <a
           class="rounded-full px-2 py-1 md:border-2 md:border-[#acb0be] dark:md:border-[#585b70] focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center"
           href={props.email}
