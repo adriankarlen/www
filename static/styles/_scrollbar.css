@@ -1,40 +1,8 @@
 * {
+    -ms-overflow-style: none;
     scrollbar-width: none;
-    scrollbar-color: #8c8fa1 #eff1f5;
 }
 
 *::-webkit-scrollbar {
-    width: 0.75rem;
-    height: 0.75rem;
-}
-
-*::-webkit-scrollbar-thumb {
-    background-color: #8c8fa1;
-    border-radius: 0.95rem;
-}
-
-*::-webkit-scrollbar-thumb:hover {
-    background-color: #6c6f85;
-}
-
-*::-webkit-scrollbar-track {
-    background-color: #eff1f5;
-}
-
-@media (prefers-color-scheme: dark) {
-    * {
-        scrollbar-color: #7f849c #1e1e2e;
-    }
-
-    *::-webkit-scrollbar-thumb {
-        background-color: #7f849c;
-    }
-
-    *::-webkit-scrollbar-thumb:hover {
-        background-color: #a6adc8;
-    }
-
-    *::-webkit-scrollbar-track {
-        background-color: #1e1e2e;
-    }
+    display: none;
 }

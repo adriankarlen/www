@@ -51,14 +51,16 @@ export default function AboutPage() {
               : "hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500"
           }}`}
         >
-          <p class="md:text-3xl text-lg font-medium">
-            My name is Adrian Karlén and I am a 29-year-old software developer
-            based in Stockholm. My main focus is web development and I have
-            previous work experience with technologies such as React, PHP,
-            JS/TS, and .NET. My everyday work has consisted of developing
-            web-based business systems, e-commerce systems, and customer
-            portals. This has also included integration with external systems. I
-            am currently working as a consultant at Viati.
+          <p class="md:text-2xl text-lg font-medium">
+            My name is Adrian Karlén, a 29-year-old software developer based in
+            Stockholm. I specialize in web development and have extensive
+            experience working with technologies such as React, PHP,
+            JavaScript/TypeScript, and .NET. Throughout my career, I have
+            primarily focused on developing robust web-based business systems,
+            e-commerce platforms, and customer portals. Additionally, I possess
+            strong skills in integrating various external systems seamlessly.
+            Currently, I am working as a consultant at Viati, where I continue
+            to enhance my expertise and contribute to impactful projects.
           </p>
         </div>
         <div class="w-full md:w-1/3 p-4">
