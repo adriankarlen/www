@@ -8,7 +8,6 @@ import IconFileDownload from "@tabler/icons/file-download.tsx";
 import { asset } from "$fresh/runtime.ts";
 
 import ColorMode from "./ColorMode.tsx";
-import Tooltip from "../components/Tooltip.tsx";
 
 interface MenuProps {
   github: string;
