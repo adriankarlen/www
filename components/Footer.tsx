@@ -3,16 +3,16 @@ import { asset } from "https://deno.land/x/fresh@1.1.6/runtime.ts";
 
 export default function Footer() {
   return (
-    <div class="h-full px-24 col-span-2 lg:col-span-1 flex gap-1 items-center mt-10 justify-between">
+    <div class="h-full md:px-52 px-4 col-span-2 lg:col-span-1 flex md:gap-1 gap-4 items-center mt-10 justify-between">
       <a
-        class="text-2xl font-bold text-gray-700 dark:text-gray-300"
+        class="text-2xl md:inline hidden font-bold text-gray-700 dark:text-gray-300"
         href="#top"
       >
         Adrian Karlén
       </a>
-      <div class="flex flex-col items-center gap-2">
+      <div class="flex flex-col items-center justify-center gap-2">
         <a
-          class="relative w-10"
+          class="relative w-10 md:inline hidden"
           width="16"
           height="16"
           href="https://github.com/adriankarlen"
@@ -24,7 +24,7 @@ export default function Footer() {
         <a
           href="https://fresh.deno.dev"
           target="_blank"
-          class="mt-3 flex items-center gap-1 md:justify-end"
+          class="md:mt-3 flex items-center gap-1 md:justify-end"
         >
           <img
             src={asset("/fresh-logo.svg")}
@@ -34,7 +34,7 @@ export default function Footer() {
           Made with <span class="font-bold">Fresh</span>
         </a>
       </div>
-      <span class="text-sm">
+      <span class="md:text-sm text-xs">
         Copyright © {new Date().getFullYear()} Adrian Karlén
         <br />
         All rights reserved.

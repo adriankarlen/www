@@ -15,7 +15,7 @@ export default function Home() {
         <ProjectsPage />
         <FloatingBox />
       </main>
-      <footer class="mx-auto h-96 w-screen bg-[#dce0e8] dark:bg-[#11111b] md:h-48">
+      <footer class="mx-auto h-36 w-screen bg-[#dce0e8] dark:bg-[#11111b] md:h-48">
         <Footer />
       </footer>
     </>
