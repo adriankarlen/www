@@ -2,6 +2,7 @@ import AboutPage from "../islands/AboutPage.tsx";
 import FloatingBox from "../islands/FloatingBox.tsx";
 import Header from "../islands/Header.tsx";
 import ProjectsPage from "../components/ProjectsPage.tsx";
+import Footer from "../components/Footer.tsx";
 
 export default function Home() {
   return (
@@ -14,6 +15,9 @@ export default function Home() {
         <ProjectsPage />
         <FloatingBox />
       </main>
+      <footer class="mx-auto h-96 w-screen bg-[#dce0e8] dark:bg-[#11111b] md:h-48">
+        <Footer />
+      </footer>
     </>
   );
 }
