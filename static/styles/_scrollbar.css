@@ -1,6 +1,7 @@
 html {
     -ms-overflow-style: none;
     scrollbar-width: thin;
+    scrollbar-color: #8c8fa1 #eff1f5;
 }
 
 html::-webkit-scrollbar {
