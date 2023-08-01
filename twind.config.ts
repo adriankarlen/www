@@ -7,8 +7,8 @@ export default {
             colors: {
                 primary: 'rgb(var(--color-primary))',
                 secondary: 'rgb(var(--color-secondary))',
-                error: '#f38ba8'
-            }
-        }
-    }
+                error: '#f38ba8',
+            },
+        },
+    },
 } as Options;
