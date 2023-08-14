@@ -1,4 +1,5 @@
-<h2 align="center">
+<!-- deno-fmt-ignore-file -->
+<h2 ali --gn="center">
 	<img src="https://raw.githubusercontent.com/adriankarlen/www/main/static/misc/avatar.png" width="100" alt="Logo"/><br/>
 	<img src="https://raw.githubusercontent.com/adriankarlen/www/main/static/misc/transparent.png" height="30" width="0px"/>
 	Hi! 👋
