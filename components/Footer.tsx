@@ -27,7 +27,7 @@ export default function Footer() {
                     class='md:mt-3 flex items-center gap-1 md:justify-end'
                 >
                     <img
-                        src={asset('/fresh-logo.svg')}
+                        src={asset('fresh-logo.svg')}
                         alt='Fresh logo'
                         class='h-6 w-6'
                     />
