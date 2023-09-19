@@ -7,7 +7,7 @@
 
 This is the source code for my personal website, which is available at
 [adriankarlen.dev](https://adriankarlen.dev). It is a static website, built
-using with [Fresh](https://fresh.deno.dev), and hosted on
+using [Fresh](https://fresh.deno.dev), and hosted on
 [Deno](https://deno.com/deploy). The color palette used is
 [Catppuccin](https://github.com/catppuccin) (mocha for dark mode and latte for
 light mode). The font used is [Inter](https://rsms.me/inter/).
