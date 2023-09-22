@@ -16,7 +16,7 @@ light mode). The font used is [Inter](https://rsms.me/inter/).
 
 ### 📦 Prerequisites
 
--   🦕 [Deno](https://docs.deno.com/runtime/manual/getting_started/installation)
+-   [🦕 Deno](https://docs.deno.com/runtime/manual/getting_started/installation)
 
 ### 🛠️ Installation
 
