@@ -23,15 +23,15 @@ html::-webkit-scrollbar-track {
 }
 
 html.dark {
-    scrollbar-color: #7f849c #1e1e2e;
+    scrollbar-color: #45475a #1e1e2e;
 }
 
 html.dark::-webkit-scrollbar-thumb {
-    background-color: #7f849c;
+    background-color: #45475a;
 }
 
 html.dark::-webkit-scrollbar-thumb:hover {
-    background-color: #a6adc8;
+    background-color: #585b70;
 }
 
 html.dark::-webkit-scrollbar-track {
