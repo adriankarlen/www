@@ -7,12 +7,41 @@
 
 This is the source code for my personal website, which is available at
 [adriankarlen.dev](https://adriankarlen.dev). It is a static website, built
-using [Fresh](https://fresh.deno.dev), and hosted on
-[Deno](https://deno.com/deploy). The color palette used is
-[Catppuccin](https://github.com/catppuccin) (mocha for dark mode and latte for
+using [🍋 Fresh](https://fresh.deno.dev), and hosted on
+[🦕 Deno](https://deno.com/deploy). The color palette used is
+[🐱☕ Catppuccin](https://github.com/catppuccin) (mocha for dark mode and latte for
 light mode). The font used is [Inter](https://rsms.me/inter/).
 
-## Usage
+## 🚀 Running Locally
 
-You are free to fork this repository and use it as a template for your own
-website. If you do, please give me credit by linking to my website.
+### 📦 Prerequisites
+
+-   🦕 [Deno](https://docs.deno.com/runtime/manual/getting_started/installation)
+
+### 🛠️ Installation
+
+1. Clone the repository
+
+```bash
+git clone https://github.com/adriankarlen/www.git
+
+```
+
+2. Go to the project directory
+
+```bash
+cd www
+```
+
+3.  Start the development server
+
+```bash
+deno task start
+```
+
+##
+
+## 📜 License
+
+This project is licensed under the MIT License - see the
+[LICENSE](https://github.com/adriankarlen/www/blob/main/LICENSE) file
