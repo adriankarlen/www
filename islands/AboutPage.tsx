@@ -47,7 +47,7 @@ export default function AboutPage() {
                 <div
                     class={`w-full md:w-2/3 p-4 ${
                         showContent
-                            ? 'transition-all duration-1000 opacity-100 translate-y-0'
+                            ? 'transition-all duration-1000 opacity-100 translate-y-0 flex'
                             : 'hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500'
                     }}`}
                 >
@@ -69,7 +69,7 @@ export default function AboutPage() {
                 <div class='w-full md:w-1/3 p-4'>
                     <label class='text-lg font-light'>Skills</label>
                 </div>
-                <div class='w-full md:w-2/3 p-4 flex'>
+                <div class='w-full md:w-2/3 p-4 flex justify-center'>
                     <Skills>
                         <div
                             class={showContent
@@ -78,7 +78,7 @@ export default function AboutPage() {
                         >
                             <div class='rounded-full border-[#1e66f5] dark:border-[#89b4fa] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandReact
-                                    class='min-w-full min-h-full'
+                                    class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
                                 />
                             </div>
@@ -90,7 +90,7 @@ export default function AboutPage() {
                         >
                             <div class='rounded-full border-[#fe640b] dark:border-[#fab387] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandCSharp
-                                    class='min-w-full min-h-full'
+                                    class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
                                 />
                             </div>
@@ -102,7 +102,7 @@ export default function AboutPage() {
                         >
                             <div class='rounded-full border-[#d20f39] dark:border-[#f38ba8] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandTypescript
-                                    class='min-w-full min-h-full'
+                                    class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
                                 />
                             </div>
@@ -114,7 +114,7 @@ export default function AboutPage() {
                         >
                             <div class='rounded-full border-[#40a02b] dark:border-[#a6e3a1] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandPhp
-                                    class='min-w-full min-h-full'
+                                    class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
                                 />
                             </div>
@@ -126,7 +126,7 @@ export default function AboutPage() {
                         >
                             <div class='rounded-full border-[#df8e1d] dark:border-[#f9e2af] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandPython
-                                    class='min-w-full min-h-full'
+                                    class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
                                 />
                             </div>
