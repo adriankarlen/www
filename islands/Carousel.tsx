@@ -23,7 +23,7 @@ const Slide = (props: SlideProps) => {
     return (
         <div
             key={key}
-            class={`flex flex-col items-center ${props.class} w-full h-full text-center text-white font-semibold`}
+            class={`flex flex-col items-center justify-center ${props.class} w-full h-full text-center text-white font-semibold`}
         >
             <div class='absolute top-4 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-[#313244] rounded-full'>
                 <span class='text-md font-bold text-[#cdd6f4]'>{text}</span>
