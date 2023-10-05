@@ -12,6 +12,11 @@ const SLIDE_DATA = [
         text: '_sushi startpage',
         url: 'https://github.com/adriankarlen/_sushi',
     },
+    {
+        bgImage: asset('projects/vscode-relapce.webp'),
+        text: 'vscode relapce',
+        url: 'https://github.com/adriankarlen/vscode-relapce',
+    },
 ];
 
 export default function ProjectsPage() {
