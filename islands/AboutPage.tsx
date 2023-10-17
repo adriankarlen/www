@@ -11,6 +11,10 @@ import Skills from '../components/Skills.tsx';
 export default function AboutPage() {
     const [showContent, setShowContent] = useState(false);
     const aboutRef = useRef(null);
+    const birthDate = new Date('1994-01-04');
+    const age = Math.floor(
+        (Date.now() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25),
+    );
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -20,7 +24,7 @@ export default function AboutPage() {
                     observer.disconnect();
                 }
             },
-            { threshold: 0.1 }, // Adjust the threshold as per your needs
+            { threshold: 0.1 },
         );
 
         if (aboutRef.current) {
@@ -52,18 +56,18 @@ export default function AboutPage() {
                     }}`}
                 >
                     <p class='md:text-2xl text-lg font-medium'>
-                        My name is Adrian Karlén, a 29-year-old software
-                        developer based in Stockholm. I specialize in web
-                        development and have extensive experience working with
-                        technologies such as React, PHP, JavaScript/TypeScript,
-                        and .NET. Throughout my career, I have primarily focused
-                        on developing robust web-based business systems,
-                        e-commerce platforms, and customer portals.
-                        Additionally, I possess strong skills in integrating
-                        various external systems seamlessly. Currently, I am
-                        working as a consultant at Viati, where I continue to
-                        enhance my expertise and contribute to impactful
-                        projects.
+                        My name is Adrian Karlén, a{' '}
+                        {age}-year-old software developer based in Stockholm. I
+                        specialize in web development and have extensive
+                        experience working with technologies such as React, PHP,
+                        JavaScript/TypeScript, and .NET. Throughout my career, I
+                        have primarily focused on developing robust web-based
+                        business systems, e-commerce platforms, and customer
+                        portals. Additionally, I possess strong skills in
+                        integrating various external systems seamlessly.
+                        Currently, I am working as a consultant at Viati, where
+                        I continue to enhance my expertise and contribute to
+                        impactful projects.
                     </p>
                 </div>
                 <div class='w-full md:w-1/3 p-4'>
