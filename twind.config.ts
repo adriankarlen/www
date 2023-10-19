@@ -23,8 +23,8 @@ export default {
                     iris: 'hsl(var(--rp-iris))',
                     highlightLow: 'hsl(var(--rp-highlightLow))',
                     highlightMed: 'hsl(var(--rp-highlightMed))',
-                    highlightHigh: 'hsl(var(--rp-highlightHigh))'
-                }
+                    highlightHigh: 'hsl(var(--rp-highlightHigh))',
+                },
             },
         },
     },
