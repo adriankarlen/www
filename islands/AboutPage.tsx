@@ -80,7 +80,7 @@ export default function AboutPage() {
                                 ? 'transition-all duration-1000 opacity-100 translate-y-0'
                                 : 'hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500'}
                         >
-                            <div class='rounded-full border-[#1e66f5] dark:border-[#89b4fa] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
+                            <div class='rounded-full border-rp-love md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandReact
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
@@ -92,7 +92,7 @@ export default function AboutPage() {
                                 ? 'transition-all duration-1000 delay-200 opacity-100 translate-y-0'
                                 : 'hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500'}
                         >
-                            <div class='rounded-full border-[#fe640b] dark:border-[#fab387] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
+                            <div class='rounded-full border-rp-gold md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandCSharp
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
@@ -104,7 +104,7 @@ export default function AboutPage() {
                                 ? 'transition-all duration-1000 delay-[400ms] opacity-100 translate-y-0'
                                 : 'hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500'}
                         >
-                            <div class='rounded-full border-[#d20f39] dark:border-[#f38ba8] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
+                            <div class='rounded-full border-rp-iris md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandTypescript
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
@@ -116,7 +116,7 @@ export default function AboutPage() {
                                 ? 'transition-all duration-1000 delay-[600ms] opacity-100 translate-y-0'
                                 : 'hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500'}
                         >
-                            <div class='rounded-full border-[#40a02b] dark:border-[#a6e3a1] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
+                            <div class='rounded-full border-rp-pine md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandPhp
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
@@ -128,7 +128,7 @@ export default function AboutPage() {
                                 ? 'transition-all duration-1000 delay-[800ms] opacity-100 translate-y-0'
                                 : 'hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500'}
                         >
-                            <div class='rounded-full border-[#df8e1d] dark:border-[#f9e2af] md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
+                            <div class='rounded-full border-rp-foam md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandPython
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
                                     stroke={1}
