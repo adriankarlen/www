@@ -37,7 +37,7 @@ export default function Menu(props: MenuProps) {
     return (
         <div class='flex flex-col md:flex-row'>
             <button
-                class={`rounded-full px-2 py-1 focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center md:hidden ${
+                class={`rounded-full px-2 py-1 focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center md:hidden ${
                     isMenuOpen ? 'bg-gray-200' : ''
                 }`}
                 onClick={toggleMenu}
@@ -56,28 +56,28 @@ export default function Menu(props: MenuProps) {
                 } transition-all duration-300`}
             >
                 <a
-                    class='rounded-full px-2 py-1 md:border-2 md:border-[#acb0be] dark:md:border-[#585b70] focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center'
+                    class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
                     href={props.github}
                     target='_blank'
                 >
                     <IconBrandGithub />
                 </a>
                 <a
-                    class='rounded-full px-2 py-1 md:border-2 md:border-[#acb0be] dark:md:border-[#585b70] focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center'
+                    class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
                     href={props.email}
                     target='_blank'
                 >
                     <IconMail />
                 </a>
                 <a
-                    class='rounded-full px-2 py-1 md:border-2 md:border-[#acb0be] dark:md:border-[#585b70] focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center'
+                    class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
                     href={props.linkedin}
                     target='_blank'
                 >
                     <IconBrandLinkedin />
                 </a>
                 <a
-                    class='rounded-full px-2 py-1 md:border-2 md:border-[#acb0be] dark:md:border-[#585b70] focus:outline-none hover:bg-gray-200 dark:hover:bg-[#313244] w-12 h-12 flex items-center justify-center'
+                    class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
                     href={asset('adriankarlen-resume.pdf')}
                     target='_blank'
                 >

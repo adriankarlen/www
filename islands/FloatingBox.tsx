@@ -32,7 +32,7 @@ const FloatingBox = () => {
                     : 'hidden opacity-0 translate-y-[20%] md:block bottom-0 left-0 transition-all duration-500 delay-150 pointer-events-none'
             }`}
         >
-            <div className='bg-[#dce0e8] dark:bg-[#11111b] shadow-lg rounded-full p-4 flex justify-center'>
+            <div className='bg-rp-surface shadow-lg rounded-full p-4 flex justify-center'>
                 <Menu
                     email='mailto:akarlen@pm.me'
                     github='https://github.com/adriankarlen'

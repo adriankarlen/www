@@ -3,7 +3,7 @@ import { asset } from 'https://deno.land/x/fresh@1.1.6/runtime.ts';
 
 export default function Footer() {
     return (
-        <div class='h-full md:px-52 px-4 col-span-2 lg:col-span-1 flex md:gap-1 gap-4 items-center mt-10 justify-between'>
+        <div class='h-full md:px-52 px-4 col-span-2 lg:col-span-1 flex md:gap-1 gap-4 items-center mt-10 justify-between border-t-2 border-rp-overlay'>
             <a
                 class='text-2xl md:inline hidden font-bold text-gray-700 dark:text-gray-300'
                 href='#top'

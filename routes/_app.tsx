@@ -11,7 +11,7 @@ export default function App({ Component }: AppProps) {
                 <link rel='stylesheet' href='styles/_scrollbar.css' />
                 <title>adriankarlen</title>
             </Head>
-            <div class='bg-[#eff1f5] dark:bg-[#1e1e2e] text-[#4c4f69] dark:text-[#cdd6f4]'>
+            <div class='bg-rp-base text-rp-text'>
                 <Component />
             </div>
         </html>

@@ -25,8 +25,8 @@ const Slide = (props: SlideProps) => {
             key={key}
             class={`flex flex-col items-center justify-center ${props.class} w-full h-full text-center text-white font-semibold`}
         >
-            <div class='absolute top-4 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-[#313244] rounded-full'>
-                <span class='text-md font-bold text-[#cdd6f4]'>{text}</span>
+            <div class='absolute top-4 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-rp-overlay rounded-full'>
+                <span class='text-md font-bold text-rp-text'>{text}</span>
             </div>
             <a href={url} target='_blank'>
                 <img
@@ -48,8 +48,7 @@ type CarouselProps = {
 };
 
 const Carousel = (props: CarouselProps) => {
-    const NAVIGATION_COLOR =
-        `hover:text-[#6c6f85] dark:hover:text-[#a6adc8] text-[#4c4f69] dark:text-[#cdd6f4]`;
+    const NAVIGATION_COLOR = `hover:text-rp-subtle dark:text-rp-text`;
     const CHEVRON_STYLE =
         `absolute z-30 w-10 h-10 ${NAVIGATION_COLOR} cursor-pointer`;
     const SHOW_NAVIGATION = props.showNavigation === false ? false : true;
