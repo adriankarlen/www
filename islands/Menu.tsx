@@ -2,7 +2,7 @@ import { useEffect, useState } from 'preact/hooks';
 import IconBrandGithub from '@tabler/icons/brand-github.tsx';
 import IconBrandLinkedin from '@tabler/icons/brand-linkedin.tsx';
 import IconMail from '@tabler/icons/mail.tsx';
-import IconMenu2 from '@tabler/icons/menu-2.tsx';
+import IconMenu from '@tabler/icons/menu.tsx';
 import IconPlus from '@tabler/icons/plus.tsx';
 import IconFileDownload from '@tabler/icons/file-download.tsx';
 import { asset } from '$fresh/runtime.ts';
@@ -47,7 +47,7 @@ export default function Menu(props: MenuProps) {
                         isMenuOpen ? 'rotate-45' : ''
                     }`}
                 >
-                    {isMenuOpen ? <IconPlus /> : <IconMenu2 />}
+                    {isMenuOpen ? <IconPlus /> : <IconMenu />}
                 </div>
             </button>
             <div
