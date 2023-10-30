@@ -47,6 +47,10 @@ export default function ColorMode() {
 
     return (
         <button
+            type='button'
+            title={`Switch to ${
+                state.value === 'dark' ? 'light' : 'dark'
+            } mode`}
             class={`rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center transition-colors ${
                 state.value === 'dark' ? 'bg-dark' : 'bg-light'
             }`}

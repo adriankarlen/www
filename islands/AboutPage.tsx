@@ -46,7 +46,7 @@ export default function AboutPage() {
                 class='flex flex-wrap w-full md:w-2/3 p-4 flex-grow'
             >
                 <div class='w-full md:w-1/3 p-4'>
-                    <label class='text-lg font-light'>About Me</label>
+                    <h2 class='text-lg font-light'>About Me</h2>
                 </div>
                 <div
                     class={`w-full md:w-2/3 p-4 ${
@@ -71,7 +71,7 @@ export default function AboutPage() {
                     </p>
                 </div>
                 <div class='w-full md:w-1/3 p-4'>
-                    <label class='text-lg font-light'>Skills</label>
+                    <h2 class='text-lg font-light'>Skills</h2>
                 </div>
                 <div class='w-full md:w-2/3 p-4 flex justify-center'>
                     <Skills>

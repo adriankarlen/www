@@ -37,6 +37,8 @@ export default function Menu(props: MenuProps) {
     return (
         <div class='flex flex-col md:flex-row'>
             <button
+                type='button'
+                title={isMenuOpen ? 'Close menu' : 'Open menu'}
                 class={`rounded-full px-2 py-1 focus:outline-none w-12 h-12 flex items-center justify-center md:hidden ${
                     isMenuOpen ? 'bg-rp-overlay' : ''
                 }`}
