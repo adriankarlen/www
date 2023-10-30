@@ -21,12 +21,14 @@ export default function Header(props: HeaderProps) {
                     <h1 class='text-xl font-light'>{props.name}</h1>
                     <h2 class='text-lg font-light'>Developer</h2>
                 </div>
-                <div class='flex flex-col'>
-                    <Menu
-                        email='mailto:akarlen@pm.me'
-                        github='https://github.com/adriankarlen'
-                        linkedin='https://www.linkedin.com/in/adrian-karlen/'
-                    />
+                <div class='flex flex-col relative'>
+                    <div class='absolute top-0 right-0'>
+                        <Menu
+                            email='mailto:akarlen@pm.me'
+                            github='https://github.com/adriankarlen'
+                            linkedin='https://www.linkedin.com/in/adrian-karlen/'
+                        />
+                    </div>
                 </div>
             </nav>
             <div class='flex flex-col items-center justify-center flex-grow'>
