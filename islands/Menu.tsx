@@ -37,8 +37,8 @@ export default function Menu(props: MenuProps) {
     return (
         <div class='flex flex-col md:flex-row'>
             <button
-                class={`rounded-full px-2 py-1 focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center md:hidden ${
-                    isMenuOpen ? 'bg-gray-200' : ''
+                class={`rounded-full px-2 py-1 focus:outline-none w-12 h-12 flex items-center justify-center md:hidden ${
+                    isMenuOpen ? 'bg-rp-overlay' : ''
                 }`}
                 onClick={toggleMenu}
             >
@@ -51,9 +51,9 @@ export default function Menu(props: MenuProps) {
                 </div>
             </button>
             <div
-                class={`flex flex-col gap-0 md:flex-row md:gap-4 ${
-                    isMenuOpen ? 'xs:block' : 'hidden md:flex'
-                } transition-all duration-300`}
+                class={`flex flex-col gap-0 md:flex-row md:gap-4 transition-all duration-300 ${
+                    isMenuOpen ? '' : 'hidden md:flex'
+                }`}
             >
                 <a
                     class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
