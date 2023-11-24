@@ -80,7 +80,7 @@ export default function Menu(props: MenuProps) {
                 </a>
                 <a
                     class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
-                    href={asset('adriankarlen-resume.pdf')}
+                    href={asset(props.resume)}
                     target='_blank'
                 >
                     <IconFileDownload />

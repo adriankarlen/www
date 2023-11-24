@@ -27,6 +27,7 @@ export default function Header(props: HeaderProps) {
                             email='mailto:akarlen@pm.me'
                             github='https://github.com/adriankarlen'
                             linkedin='https://www.linkedin.com/in/adrian-karlen/'
+                            resume='adriankarlen-resume.pdf'
                         />
                     </div>
                 </div>
