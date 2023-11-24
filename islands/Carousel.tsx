@@ -31,6 +31,7 @@ const Slide = (props: SlideProps) => {
             <a href={url} target='_blank'>
                 <img
                     src={bgImage}
+                    title={text}
                     class='self-center object-cover w-full h-full'
                 />
             </a>
