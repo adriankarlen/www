@@ -27,7 +27,7 @@ export default function ProjectsPage() {
                 class='flex flex-wrap flex-grow w-full p-4 justify-center items-center'
             >
                 <div class='w-full flex flex-col'>
-                    <h2 class='p-2 text-4xl md:text-6xl font-bold mx-auto text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary'>
+                    <h2 class='p-2 text-4xl md:text-6xl font-black mx-auto text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary'>
                         Projects
                     </h2>
                     <p class='p-2 text-lg md:text-xl font-light mx-auto'>

@@ -38,7 +38,7 @@
 html,
 body {
     margin: 0;
-    font-family: 'Inter', sans-serif !important;
+    font-family: 'Nunito', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;

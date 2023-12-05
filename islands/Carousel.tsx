@@ -26,7 +26,7 @@ const Slide = (props: SlideProps) => {
             class={`flex flex-col items-center justify-center ${props.class} w-full h-full text-center text-white font-semibold`}
         >
             <div class='absolute top-4 left-1/2 transform -translate-x-1/2 px-3 py-1 bg-rp-overlay rounded-full'>
-                <span class='text-md font-bold text-rp-text'>{text}</span>
+                <span class='text-md font-extrabold text-rp-text'>{text}</span>
             </div>
             <a href={url} target='_blank'>
                 <img

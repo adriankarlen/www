@@ -55,19 +55,36 @@ export default function AboutPage() {
                             : 'hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500'
                     }}`}
                 >
-                    <p class='md:text-2xl text-lg font-medium'>
+                    <p class='md:text-xl text-lg font-medium'>
                         My name is Adrian Karlén, a{' '}
                         {age}-year-old software developer based in Stockholm. I
                         specialize in web development and have extensive
                         experience working with technologies such as React, PHP,
-                        JavaScript/TypeScript, and .NET. Throughout my career, I
-                        have primarily focused on developing robust web-based
+                        JavaScript/TypeScript, and .NET. Currently, I am working
+                        as a consultant at Viati, where I continue to enhance my
+                        expertise and contribute to impactful projects.
+                    </p>
+                </div>
+                <div class='w-full md:w-1/3 p-4'>
+                    <h2 class='text-lg font-light'>Experience</h2>
+                </div>
+                <div
+                    class={`w-full md:w-2/3 p-4 ${
+                        showContent
+                            ? 'transition-all duration-1000 delay-200 opacity-100 translate-y-0 flex'
+                            : 'hidden opacity-0 translate-y-[5%] md:block absolute top-0 left-0 transition-all duration-1000 delay-500'
+                    }}`}
+                >
+                    <p class='md:text-xl text-lg font-medium'>
+                        I have been working as a software developer since 2019.
+                        During this time, I have worked with a wide range of
+                        clients, including both small and large companies. My
+                        work has primarily focused on developing web-based
                         business systems, e-commerce platforms, and customer
-                        portals. Additionally, I possess strong skills in
-                        integrating various external systems seamlessly.
-                        Currently, I am working as a consultant at Viati, where
-                        I continue to enhance my expertise and contribute to
-                        impactful projects.
+                        portals. I have also been involved in the development of
+                        mobile applications and websites. My work has included
+                        everything from developing new features to maintaining
+                        and improving existing code bases.
                     </p>
                 </div>
                 <div class='w-full md:w-1/3 p-4'>

@@ -10,7 +10,7 @@ This is the source code for my personal website, which is available at
 using [🍋 Fresh](https://fresh.deno.dev), and hosted on
 [🦕 Deno](https://deno.com/deploy). The color palette used is
 [🌷 Rosé Pine](https://rosepinetheme.com). The font used is
-[Inter](https://rsms.me/inter/).
+[Nunito](https://fonts.google.com/specimen/Nunito).
 
 ## 🚀 Running Locally
 

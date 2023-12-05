@@ -7,7 +7,7 @@ interface GreetingProps {
 export default function Greeting(props: GreetingProps) {
     return (
         <div class={`${props.class} flex flex-col items-center justify-center`}>
-            <h1 class='text-4xl md:text-8xl mx-auto font-bold'>
+            <h1 class='text-4xl md:text-8xl mx-auto font-black'>
                 Hi, my name is{' '}
                 <span class='text-transparent bg-clip-text bg-gradient-to-br from-primary to-secondary'>
                     Adrian
