@@ -13,6 +13,7 @@ interface MenuProps {
     github: string;
     email: string;
     linkedin: string;
+    resume: string;
 }
 
 export default function Menu(props: MenuProps) {
@@ -61,6 +62,7 @@ export default function Menu(props: MenuProps) {
                     class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
                     href={props.github}
                     target='_blank'
+                    title={props.github}
                 >
                     <IconBrandGithub />
                 </a>
@@ -68,6 +70,7 @@ export default function Menu(props: MenuProps) {
                     class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
                     href={props.email}
                     target='_blank'
+                    title={props.email}
                 >
                     <IconMail />
                 </a>
@@ -75,13 +78,15 @@ export default function Menu(props: MenuProps) {
                     class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
                     href={props.linkedin}
                     target='_blank'
+                    title={props.linkedin}
                 >
                     <IconBrandLinkedin />
                 </a>
                 <a
                     class='rounded-full px-2 py-1 md:border-2 md:border-rp-highlightMed focus:outline-none hover:bg-rp-overlay w-12 h-12 flex items-center justify-center'
-                    href={asset('adriankarlen-resume.pdf')}
+                    href={asset(props.resume)}
                     target='_blank'
+                    title={props.resume}
                 >
                     <IconFileDownload />
                 </a>
