@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div
             id='about'
             ref={aboutRef}
-            class='flex flex-col items-center h-screen p-4 overflow-y-auto scroll-snap-type-y scroll-behavior-smooth'
+            class='flex flex-col items-center min-h-screen p-4 overflow-y-auto scroll-snap-type-y scroll-behavior-smooth'
         >
             <div
                 id='content'
