@@ -1,5 +1,5 @@
 import IconBrandGithub from '@tabler/icons/brand-github.tsx';
-import { asset } from 'https://deno.land/x/fresh@1.1.6/runtime.ts';
+import FreshIcon from '@tabler/icons/lemon-2.tsx';
 
 export default function Footer() {
     return (
@@ -26,11 +26,7 @@ export default function Footer() {
                     target='_blank'
                     class='md:mt-3 flex items-center gap-1 md:justify-end'
                 >
-                    <img
-                        src={asset('fresh-logo.svg')}
-                        alt='Fresh logo'
-                        class='h-6 w-6'
-                    />
+                    <FreshIcon class='w-6 h-6 text-rp-gold' />
                     Made with <span class='font-bold'>Fresh</span>
                 </a>
             </div>
