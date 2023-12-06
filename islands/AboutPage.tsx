@@ -100,7 +100,7 @@ export default function AboutPage() {
                             <div class='rounded-full border-rp-love md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandReact
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
-                                    stroke={1}
+                                    stroke={1.5}
                                 />
                             </div>
                         </div>
@@ -112,7 +112,7 @@ export default function AboutPage() {
                             <div class='rounded-full border-rp-gold md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandCSharp
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
-                                    stroke={1}
+                                    stroke={1.5}
                                 />
                             </div>
                         </div>
@@ -124,7 +124,7 @@ export default function AboutPage() {
                             <div class='rounded-full border-rp-iris md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandTypescript
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
-                                    stroke={1}
+                                    stroke={1.5}
                                 />
                             </div>
                         </div>
@@ -136,7 +136,7 @@ export default function AboutPage() {
                             <div class='rounded-full border-rp-pine md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandPhp
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
-                                    stroke={1}
+                                    stroke={1.5}
                                 />
                             </div>
                         </div>
@@ -148,7 +148,7 @@ export default function AboutPage() {
                             <div class='rounded-full border-rp-foam md:border-4 border-2 md:p-4 p-1 flex items-center justify-center md:w-24 md:h-24 w-12 h-12 hover:scale-105 transition-transform duration-300'>
                                 <IconBrandPython
                                     class='min-w-[80%] min-h-[80%] md:min-w-full md:min-h-full'
-                                    stroke={1}
+                                    stroke={1.5}
                                 />
                             </div>
                         </div>
