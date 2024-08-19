@@ -7,16 +7,16 @@
 
 This is the source code for my personal website, which is available at
 [adriankarlen.dev](https://adriankarlen.dev). It is a static website, built
-using [🍋 Fresh](https://fresh.deno.dev), and hosted on
-[🦕 Deno](https://deno.com/deploy). The color palette used is
+using [🔥 Svelte](https://svelte.dev/) and [💨 Tailwind](https://tailwindcss.com/), and hosted on
+[🚀 Vercel](https://vercel.com/). The color palette used is
 [🌷 Rosé Pine](https://rosepinetheme.com). The font used is
-[Nunito](https://fonts.google.com/specimen/Nunito).
+[DM Sans](https://fonts.adobe.com/fonts/dm-sans).
 
 ## 🚀 Running Locally
 
 ### 📦 Prerequisites
 
-- [🦕 Deno](https://docs.deno.com/runtime/manual/getting_started/installation)
+- [🍞 Bun](https://bun.sh/)
 
 ### 🛠️ Installation
 
@@ -32,13 +32,16 @@ git clone https://github.com/adriankarlen/www.git
 cd www
 ```
 
-3. Start the development server
+3. Install dependencies
 
 ```bash
-deno task start
+bun install 
 ```
+4. Start the development server
 
-## 
+```bash
+bun install 
+```
 
 ## 📜 License
 
