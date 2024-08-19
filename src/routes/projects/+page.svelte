@@ -3,7 +3,7 @@
 </script>
 
 <div
-  class="flex flex-col m-auto justify-between items-center w-full 2xl:w-2/3 px-10"
+  class="flex flex-col m-auto justify-between items-center w-full 2xl:w-2/3 px-10 animate-enter"
 >
   <div class="text-4xl lg:text-6xl font-black">
     <h1>Here are some stuffs I've done.</h1>
