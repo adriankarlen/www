@@ -7,9 +7,10 @@
     IconMail
   } from "@tabler/icons-svelte";
   import Button from "../components/Button.svelte";
+  import Menu from "../components/Menu.svelte";
 </script>
 
-<nav class="flex justify-between p-5 bg-rp-overlay border-b-4 border-rp-text">
+<nav class="flex justify-between items-center p-5 mb-10 bg-rp-overlay border-b-4 border-rp-text">
   <div class="flex gap-2">
     <a href="/">
       <img
@@ -23,7 +24,7 @@
     <a href="/about-me">About me</a>
     <a href="/projects">Projects</a>
   </div>
-  <div class="flex items-center gap-5">
+  <Menu>
     <Button link="https://github.com/adriankarlen">
       <IconBrandGithub class="w-full h-full p-1 text-rp-pine" />
     </Button>
@@ -36,6 +37,6 @@
     <Button link="https://adriankarlen.dev/adriankarlen-resume.pdf">
       <IconFileDownload class="w-full h-full p-1 text-rp-love" />
     </Button>
-  </div>
+  </Menu>
 </nav>
 <slot />
