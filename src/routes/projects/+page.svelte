@@ -11,7 +11,7 @@
   <div class="my-10 grid grid-cols-1 lg:grid-cols-2 gap-10 font-medium">
     <a href="https://github.com/adriankarlen/_sushi">
       <Card imageUrl="/projects/_sushi.webp" alt="sushi startpage">
-        _sushi start page
+        _sushi
       </Card>
     </a>
     <a href="https://github.com/adriankarlen/bar.wezterm">
@@ -20,7 +20,7 @@
       </Card>
     </a>
     <a href="https://github.com/adriankarlen/www">
-      <Card imageUrl="/projects/personal-website.webp" alt="personal website">
+      <Card imageUrl="/projects/this-site.png" alt="personal website">
         adriankarlen.dev
       </Card>
     </a>
