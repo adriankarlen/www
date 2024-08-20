@@ -28,16 +28,16 @@
   </div>
   <Menu>
     <Button link="https://github.com/adriankarlen">
-      <IconBrandGithub class="w-full h-full p-1 text-rp-pine" />
+      <IconBrandGithub class="w-full h-full z-10 p-1 text-rp-pine md:bg-blend-10 md:hover:bg-blend-10 hover:bg-blend-25" />
     </Button>
     <Button link="mailto:akarlen@pm.me">
-      <IconMail class="w-full h-full p-1 text-rp-gold" />
+      <IconMail class="w-full h-full p-1 text-rp-gold md:bg-blend-10 md:hover:bg-blend-10 hover:bg-blend-25" />
     </Button>
     <Button link="https://www.linkedin.com/in/adrian-karlen">
-      <IconBrandLinkedin class="w-full h-full p-1 text-rp-rose" />
+      <IconBrandLinkedin class="w-full h-full p-1 text-rp-rose md:bg-blend-10 md:hover:bg-blend-10 hover:bg-blend-25" />
     </Button>
     <Button link="https://adriankarlen.dev/adriankarlen-resume.pdf">
-      <IconFileDownload class="w-full h-full p-1 text-rp-love" />
+      <IconFileDownload class="w-full h-full p-1 text-rp-love md:bg-blend-10 md:hover:bg-blend-10 hover:bg-blend-25" />
     </Button>
   </Menu>
 </nav>

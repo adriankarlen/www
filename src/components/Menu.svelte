@@ -1,6 +1,7 @@
 <script>
   import { onMount } from "svelte";
-  import { IconMenu } from "@tabler/icons-svelte";
+  import { IconMenu, IconX } from "@tabler/icons-svelte";
+  import Button from "../components/Button.svelte";
   let isMobile = false;
 
   onMount(() => {
@@ -17,14 +18,17 @@
 
 <div class="relative">
   {#if isMobile}
-    <button
-      class="w-10 h-10 flex items-center border-2 border-rp-text shadow-nb"
-      on:click={() => (menuOpen = !menuOpen)}
+    <Button
+      onClick={() => (menuOpen = !menuOpen)}
       aria-expanded={menuOpen}
       aria-controls="menu"
     >
-      <IconMenu class="w-full h-full p-1"/>
-    </button>
+      {#if menuOpen}
+        <IconX class="w-full h-full p-1" />
+      {:else}
+        <IconMenu class="w-full h-full p-1" />
+      {/if}
+    </Button>
     {#if menuOpen}
       <div
         id="menu"

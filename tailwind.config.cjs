@@ -1,3 +1,4 @@
+// eslint-disable-next-line @typescript-eslint/no-require-imports
 const defaultTheme = require("tailwindcss/defaultTheme");
 /** @type {import('tailwindcss').Config} */
 export default {
@@ -21,7 +22,8 @@ export default {
           highlightLow: "hsl(var(--rp-highlightLow) / <alpha-value>)",
           highlightMed: "hsl(var(--rp-highlightMed) / <alpha-value>)",
           highlightHigh: "hsl(var(--rp-highlightHigh) / <alpha-value>)"
-        }
+        },
+        blend: generateBlends()
       },
       fontFamily: {
         sans: ["DM Mono", ...defaultTheme.fontFamily.sans]
@@ -33,3 +35,11 @@ export default {
   },
   plugins: []
 };
+
+function generateBlends() {
+  const blends = {};
+  for (let i = 5; i <= 100; i += 5) {
+    blends[i] = `color-mix(in srgb, currentColor ${i}%, transparent)`;
+  }
+  return blends;
+}
