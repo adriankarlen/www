@@ -10,7 +10,9 @@
   import Menu from "../components/Menu.svelte";
 </script>
 
-<nav class="flex justify-between items-center p-5 mb-10 bg-rp-overlay border-b-4 border-rp-text">
+<nav
+  class="flex justify-between items-center p-5 mb-10 bg-rp-overlay border-b-4 border-rp-text"
+>
   <div class="flex gap-2">
     <a href="/">
       <img

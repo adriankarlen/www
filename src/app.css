@@ -3,25 +3,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+:root {
+  --rp-base: 32deg 57% 95%;
+  --rp-surface: 35deg 100% 98%;
+  --rp-overlay: 33deg 43% 91%;
+  --rp-muted: 257deg 9% 61%;
+  --rp-subtle: 248deg 12% 52%;
+  --rp-text: 248deg 19% 40%;
+  --rp-love: 343deg 35% 55%;
+  --rp-gold: 35deg 81% 56%;
+  --rp-rose: 3deg 53% 67%;
+  --rp-pine: 197deg 53% 34%;
+  --rp-foam: 189deg 30% 48%;
+  --rp-iris: 268deg 21% 57%;
+  --rp-highlightLow: 25deg 35% 93%;
+  --rp-highlightMed: 10deg 9% 86%;
+  --rp-highlightHigh: 315deg 4% 80%;
+}
+@media (prefers-color-scheme: dark) {
   :root {
-    --rp-base: 32deg 57% 95%;
-    --rp-surface: 35deg 100% 98%;
-    --rp-overlay: 33deg 43% 91%;
-    --rp-muted: 257deg 9% 61%;
-    --rp-subtle: 248deg 12% 52%;
-    --rp-text: 248deg 19% 40%;
-    --rp-love: 343deg 35% 55%;
-    --rp-gold: 35deg 81% 56%;
-    --rp-rose: 3deg 53% 67%;
-    --rp-pine: 197deg 53% 34%;
-    --rp-foam: 189deg 30% 48%;
-    --rp-iris: 268deg 21% 57%;
-    --rp-highlightLow: 25deg 35% 93%;
-    --rp-highlightMed: 10deg 9% 86%;
-    --rp-highlightHigh: 315deg 4% 80%;
-  }
-  :root[class="dark"] {
     --rp-base: 249deg 22% 12%;
     --rp-surface: 247deg 23% 15%;
     --rp-overlay: 248deg 25% 18%;
@@ -40,6 +40,30 @@
   }
 }
 
+::selection {
+  background: hsl(var(--rp-muted) / 0.2);
+}
+html,
+body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: hsl(var(--rp-text));
+  background: hsl(var(--rp-base));
+  font-weight: 500;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
 .animate-enter {
   opacity: 0;
   animation: enter 500ms forwards;
@@ -56,8 +80,4 @@
     opacity: 1;
     transform: none;
   }
-}
-html,
-body {
-  font-family: "DM Sans", sans-serif;
 }
