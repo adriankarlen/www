@@ -40,7 +40,7 @@ bun install
 4. Start the development server
 
 ```bash
-bun install 
+bun run dev 
 ```
 
 ## 📜 License
