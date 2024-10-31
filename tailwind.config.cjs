@@ -19,9 +19,9 @@ export default {
           pine: "hsl(var(--rp-pine) / <alpha-value>)",
           foam: "hsl(var(--rp-foam) / <alpha-value>)",
           iris: "hsl(var(--rp-iris) / <alpha-value>)",
-          highlightLow: "hsl(var(--rp-highlightLow) / <alpha-value>)",
-          highlightMed: "hsl(var(--rp-highlightMed) / <alpha-value>)",
-          highlightHigh: "hsl(var(--rp-highlightHigh) / <alpha-value>)"
+          highlightLow: "hsl(var(--rp-highlight-low) / <alpha-value>)",
+          highlightMed: "hsl(var(--rp-highlight-med) / <alpha-value>)",
+          highlightHigh: "hsl(var(--rp-highlight-high) / <alpha-value>)"
         },
         blend: generateBlends()
       },
@@ -29,7 +29,8 @@ export default {
         sans: ["DM Mono", ...defaultTheme.fontFamily.sans]
       },
       boxShadow: {
-        nb: "4px 4px 0 hsl(var(--rp-text))"
+        nb: "4px 4px 0 hsl(var(--rp-highlight-low))",
+        "nb-light": "4px 4px 0 hsl(var(--rp-highlight-med))"
       }
     }
   },

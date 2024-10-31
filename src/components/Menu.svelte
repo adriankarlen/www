@@ -1,10 +1,12 @@
-<script>
-  import { onMount } from "svelte";
+<script lang="ts">
+  import { type Snippet } from "svelte";
   import { IconMenu, IconX } from "@tabler/icons-svelte";
   import Button from "../components/Button.svelte";
-  let isMobile = false;
 
-  onMount(() => {
+  let isMobile = $state(false);
+  let menuOpen = $state(false);
+
+  $effect(() => {
     const updateIsMobile = () => {
       isMobile = window.innerWidth < 768; // Tailwind's sm breakpoint
     };
@@ -13,33 +15,36 @@
     return () => window.removeEventListener("resize", updateIsMobile);
   });
 
-  let menuOpen = false;
+  interface MenuProps {
+    children: Snippet;
+  }
+  let { children }: MenuProps = $props();
 </script>
 
-<div class="relative">
+<div class="relative flex">
   {#if isMobile}
     <Button
-      onClick={() => (menuOpen = !menuOpen)}
+      onclick={() => (menuOpen = !menuOpen)}
       aria-expanded={menuOpen}
       aria-controls="menu"
     >
       {#if menuOpen}
-        <IconX class="w-full h-full p-1" />
+        <IconX class="p-1 w-full h-full" />
       {:else}
-        <IconMenu class="w-full h-full p-1" />
+        <IconMenu class="p-1 w-full h-full" />
       {/if}
     </Button>
     {#if menuOpen}
       <div
         id="menu"
-        class="absolute right-0 mt-8 w-10 bg-rp-overlay border-2 border-rp-text shadow-nb"
+        class="absolute right-0 mt-8 w-10 border-2 bg-rp-overlay border-rp-highlightMed shadow-nb-light dark:border-rp-highlightLow dark:shadow-nb"
       >
-        <slot />
+        {@render children()}
       </div>
     {/if}
   {:else}
-    <div class="flex items-center gap-5">
-      <slot />
+    <div class="flex gap-5 items-center">
+      {@render children()}
     </div>
   {/if}
 </div>

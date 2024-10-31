@@ -11,18 +11,18 @@
 </script>
 
 <nav
-  class="flex justify-between items-center p-5 mb-10 bg-rp-overlay border-b-4 border-rp-text"
+  class="flex justify-between items-center p-5 mb-10 bg-rp-overlay border-b-4 border-rp-rose"
 >
   <div class="flex gap-2">
     <a href="/">
       <img
-        class="w-10 h-10 border-2 border-rp-text rounded-full"
+        class="w-10 h-10 border-2 border-rp-highlightMed dark:border-rp-highlightLow rounded-full"
         src="/misc/avatar.png"
         alt="avatar"
       />
     </a>
   </div>
-  <div class="flex items-center gap-10 text-xl font-medium">
+  <div class="flex items-center gap-4 md:gap-10 text-xl font-medium text-rp-subtle">
     <a href="/about-me">About me</a>
     <a href="/projects">Projects</a>
   </div>
