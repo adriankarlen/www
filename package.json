@@ -1,38 +1,42 @@
 {
-	"name": "www",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev --open",
-		"build": "vite build",
-		"preview": "vite preview",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"lint": "prettier --check . && eslint .",
-		"format": "prettier --write ."
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"@tailwindcss/postcss": "^4.1.3",
-		"@types/eslint": "^9.6.0",
-		"eslint": "^9.0.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-svelte": "^2.36.0",
-		"globals": "^15.0.0",
-		"prettier": "^3.1.1",
-		"prettier-plugin-svelte": "^3.1.2",
-		"svelte": "^5.0.0-next.1",
-		"svelte-check": "^3.6.0",
-		"tailwindcss": "^4.1.3",
-		"typescript": "^5.0.0",
-		"typescript-eslint": "^8.0.0",
-		"vite": "^5.0.3"
-	},
-	"type": "module",
-	"dependencies": {
-		"@tabler/icons-svelte": "^3.12.0",
-		"postcss": "^8.4.41"
-	}
+  "name": "www",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev --open",
+    "build": "vite build",
+    "preview": "vite preview",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "lint": "prettier --check . && eslint .",
+    "format": "prettier --write ."
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^3.3.1",
+    "@sveltejs/kit": "^2.20.5",
+    "@sveltejs/vite-plugin-svelte": "^5.0.3",
+    "@tailwindcss/vite": "^4.0.0",
+    "@tailwindcss/postcss": "^4.1.3",
+    "@types/eslint": "^9.6.1",
+    "eslint": "^9.24.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-svelte": "^2.46.1",
+    "globals": "^15.15.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-svelte": "^3.3.3",
+    "svelte": "^5.25.11",
+    "svelte-check": "^3.8.6",
+    "tailwindcss": "^4.1.3",
+    "typescript": "^5.8.3",
+    "typescript-eslint": "^8.29.1",
+    "vite": "^6.0.0"
+  },
+  "type": "module",
+  "dependencies": {
+    "@tabler/icons-svelte": "^3.31.0",
+    "postcss": "^8.5.3"
+  },
+  "trustedDependencies": [
+    "svelte-preprocess"
+  ]
 }
