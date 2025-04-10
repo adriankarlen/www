@@ -12,7 +12,7 @@
 {#if link}
   <a
     href={link}
-    class={`md:border-2 md:border-rp-highlightMed md:dark:border-rp-highlightLow h-8 w-8 md:h-10 md:w-10 
+    class={`md:border-2 md:border-rp-highlight-med md:dark:border-rp-highlight-low h-8 w-8 md:h-10 md:w-10 
             md:shadow-nb-light md:dark:shadow-nb md:transition-all md:hover:translate-x-boxShadowX 
             md:hover:translate-y-boxShadowY md:hover:shadow-none md:hover:translate-x-[4px] 
             md:hover:translate-y-[4px]`}
@@ -21,7 +21,7 @@
   </a>
 {:else}
   <button
-    class={`md:border-2 md:border-rp-highlightLow h-8 w-8 md:h-10 md:w-10 
+    class={`md:border-2 md:border-rp-highlight-low h-8 w-8 md:h-10 md:w-10 
             md:shadow-nb md:transition-all md:hover:translate-x-boxShadowX 
             md:hover:translate-y-boxShadowY md:hover:shadow-none md:hover:translate-x-[4px] 
             md:hover:translate-y-[4px]`}

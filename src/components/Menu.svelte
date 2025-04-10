@@ -37,7 +37,7 @@
     {#if menuOpen}
       <div
         id="menu"
-        class="absolute right-0 mt-8 w-10 border-2 bg-rp-overlay border-rp-highlightMed shadow-nb-light dark:border-rp-highlightLow dark:shadow-nb"
+        class="absolute right-0 mt-8 w-10 border-2 bg-rp-overlay border-rp-highlight-med shadow-nb-light dark:border-rp-highlight-low dark:shadow-nb"
       >
         {@render children()}
       </div>

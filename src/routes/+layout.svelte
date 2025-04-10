@@ -16,7 +16,7 @@
   <div class="flex gap-2">
     <a href="/">
       <img
-        class="w-10 h-10 border-2 border-rp-highlightMed dark:border-rp-highlightLow rounded-full"
+        class="w-10 h-10 border-2 border-rp-highlight-med dark:border-rp-highlight-low rounded-full"
         src="/misc/avatar.png"
         alt="avatar"
       />

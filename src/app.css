@@ -1,7 +1,70 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap')
+layer(base);
+@import 'tailwindcss';
+
+@theme {
+  --color-rp-base: hsl(var(--rp-base));
+  --color-rp-surface: hsl(var(--rp-surface));
+  --color-rp-overlay: hsl(var(--rp-overlay));
+  --color-rp-muted: hsl(var(--rp-muted));
+  --color-rp-subtle: hsl(var(--rp-subtle));
+  --color-rp-text: hsl(var(--rp-text));
+  --color-rp-love: hsl(var(--rp-love));
+  --color-rp-gold: hsl(var(--rp-gold));
+  --color-rp-rose: hsl(var(--rp-rose));
+  --color-rp-pine: hsl(var(--rp-pine));
+  --color-rp-foam: hsl(var(--rp-foam));
+  --color-rp-iris: hsl(var(--rp-iris));
+  --color-rp-highlight-low: hsl(var(--rp-highlight-low));
+  --color-rp-highlight-med: hsl(var(--rp-highlight-med));
+  --color-rp-highlight-high: hsl(var(--rp-highlight-high));
+
+  --color-blend-5: color-mix(in srgb, currentColor 5%, transparent);
+  --color-blend-10: color-mix(in srgb, currentColor 10%, transparent);
+  --color-blend-15: color-mix(in srgb, currentColor 15%, transparent);
+  --color-blend-20: color-mix(in srgb, currentColor 20%, transparent);
+  --color-blend-25: color-mix(in srgb, currentColor 25%, transparent);
+  --color-blend-30: color-mix(in srgb, currentColor 30%, transparent);
+  --color-blend-35: color-mix(in srgb, currentColor 35%, transparent);
+  --color-blend-40: color-mix(in srgb, currentColor 40%, transparent);
+  --color-blend-45: color-mix(in srgb, currentColor 45%, transparent);
+  --color-blend-50: color-mix(in srgb, currentColor 50%, transparent);
+  --color-blend-55: color-mix(in srgb, currentColor 55%, transparent);
+  --color-blend-60: color-mix(in srgb, currentColor 60%, transparent);
+  --color-blend-65: color-mix(in srgb, currentColor 65%, transparent);
+  --color-blend-70: color-mix(in srgb, currentColor 70%, transparent);
+  --color-blend-75: color-mix(in srgb, currentColor 75%, transparent);
+  --color-blend-80: color-mix(in srgb, currentColor 80%, transparent);
+  --color-blend-85: color-mix(in srgb, currentColor 85%, transparent);
+  --color-blend-90: color-mix(in srgb, currentColor 90%, transparent);
+  --color-blend-95: color-mix(in srgb, currentColor 95%, transparent);
+  --color-blend-100: color-mix(in srgb, currentColor 100%, transparent);
+
+  --font-sans:
+    DM Mono, ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+
+  --shadow-nb: 4px 4px 0 hsl(var(--rp-highlight-low));
+  --shadow-nb-light: 4px 4px 0 hsl(var(--rp-highlight-med));
+}
+
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    /* border-color: var(--color-gray-200, currentcolor); */
+  }
+}
 
 :root {
   --rp-base: 32deg 57% 95%;

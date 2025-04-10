@@ -12,11 +12,11 @@
 </script>
 
 <figure
-  class="w-full overflow-hidden rounded-base border-2 border-rp-highlightMed dark:border-rp-highlightLow bg-rp-overlay shadow-nb-light dark:shadow-nb {rest.class}"
+  class="w-full overflow-hidden rounded-base border-2 border-rp-highlight-med dark:border-rp-highlight-low bg-rp-overlay shadow-nb-light dark:shadow-nb {rest.class}"
 >
   <img class="w-full md:h-72 h-36 object-cover {objectPosition ?? "object-center"}" src={imageUrl} {alt} />
   <figcaption
-    class="border-t-2 border-rp-highlightLow p-4 text-rp-subtle font-semibold"
+    class="border-t-2 border-rp-highlight-low p-4 text-rp-subtle font-semibold"
   >
   {@render children()}
   </figcaption>
