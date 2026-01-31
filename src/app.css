@@ -40,8 +40,9 @@ layer(base);
   --color-blend-95: color-mix(in srgb, currentColor 95%, transparent);
   --color-blend-100: color-mix(in srgb, currentColor 100%, transparent);
 
-  --font-sans: DM Mono, ui-sans-serif, system-ui, sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-sans:
+    DM Mono, ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 
   --shadow-nb: 4px 4px 0 hsl(var(--rp-highlight-low));
   --shadow-nb-light: 4px 4px 0 hsl(var(--rp-text));
@@ -104,13 +105,6 @@ layer(base);
 
 ::selection {
   background: hsl(var(--rp-muted) / 0.2);
-}
-html,
-body {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
 }
 
 html {
