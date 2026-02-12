@@ -60,7 +60,7 @@
       </Menu>
     </nav>
   </header>
-  <main class="flex flex-col justify-center items-center flex-1 py-10">
+  <main class="flex flex-col flex-1 justify-center items-center py-10">
     {@render children()}
   </main>
 </div>
@@ -76,7 +76,10 @@
       adriankarlen
     </a>
   </p>
-  <Button onclick={scrollToTop} class="px-4 mt-4 w-max md:w-max"
-    >Go to Top</Button
+  <button
+    onclick={scrollToTop}
+    class="py-2 font-bold cursor-pointer hover:underline text-rp-muted"
   >
+    Go to top
+  </button>
 </footer>
