@@ -20,7 +20,7 @@
     xmlns="http://www.w3.org/2000/svg"
     aria-hidden="true"
     class="switch-svg"
-    class:flipped={isDark}
+    class:flipped={!isDark}
   >
     <!-- Light state path (nub at top) -->
     <path
