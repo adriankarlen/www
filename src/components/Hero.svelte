@@ -68,7 +68,7 @@
 
   {#if github.mostStarred}
     <HeroCard
-      class="absolute bottom-[30%] left-[12%] animate-float-delayed"
+      class="absolute bottom-[12%] left-[12%] animate-float-delayed sm:bottom-[30%]"
       href="https://github.com/adriankarlen/{github.mostStarred.name}"
       target="_blank"
     >
