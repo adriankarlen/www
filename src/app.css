@@ -41,6 +41,20 @@ layer(base);
   --mesh-3: #2d959611;
 }
 
+[data-theme="dark"] {
+  --bg: #0f0d2e;
+  --bg-alt: #16133a;
+  --text: #f0ede8;
+  --text-sub: #a8a4b8;
+  --accent: #f4845f;
+  --card-bg: rgba(255, 255, 255, 0.05);
+  --card-border: rgba(255, 255, 255, 0.1);
+
+  --mesh-1: #f4845f44;
+  --mesh-2: #6366f144;
+  --mesh-3: #2d959633;
+}
+
 ::selection {
   background: color-mix(in srgb, var(--accent) 20%, transparent);
 }
@@ -55,6 +69,9 @@ body {
   font-weight: 400;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition:
+    background-color 200ms ease,
+    color 200ms ease;
 }
 
 /* Mesh gradient blobs */
