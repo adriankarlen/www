@@ -4,13 +4,33 @@
   let {
     children,
     class: className = "",
-    onclick
-  }: { children: Snippet; class?: string; onclick?: () => void } = $props();
+    onclick,
+    href,
+    target
+  }: {
+    children: Snippet;
+    class?: string;
+    onclick?: () => void;
+    href?: string;
+    target?: string;
+  } = $props();
+
+  const baseClass =
+    "rounded-xl border border-card-border bg-card-bg px-4 py-3 shadow-sm backdrop-blur-xl transition-transform";
+
+  const interactiveClass = "cursor-pointer hover:scale-105";
 </script>
 
-<button
-  {onclick}
-  class="cursor-pointer rounded-xl border border-card-border bg-card-bg px-4 py-3 shadow-sm backdrop-blur-xl transition-transform hover:scale-105 {className}"
->
-  {@render children()}
-</button>
+{#if href}
+  <a {href} {target} rel="noopener noreferrer" class="{baseClass} {interactiveClass} {className}">
+    {@render children()}
+  </a>
+{:else if onclick}
+  <button {onclick} class="{baseClass} {interactiveClass} {className}">
+    {@render children()}
+  </button>
+{:else}
+  <div class="{baseClass} {className}">
+    {@render children()}
+  </div>
+{/if}

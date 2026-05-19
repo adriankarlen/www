@@ -17,8 +17,8 @@
 >
   <HeroCard
     class="absolute left-[8%] top-[20%] animate-float"
-    onclick={() =>
-      document.getElementById("about")?.scrollIntoView({ behavior: "smooth" })}
+    href="https://github.com/adriankarlen"
+    target="_blank"
   >
     <div class="flex items-center gap-2 text-sm">
       <span class="inline-block h-2 w-2 rounded-full bg-green-400"></span>
@@ -51,10 +51,8 @@
 
   <HeroCard
     class="absolute bottom-[22%] right-[10%] animate-float-delayed"
-    onclick={() =>
-      document
-        .getElementById("projects")
-        ?.scrollIntoView({ behavior: "smooth" })}
+    href="https://github.com/adriankarlen/{github.latestRepo?.name ?? 'textfox'}"
+    target="_blank"
   >
     <div class="text-xs font-medium text-text-sub">Latest project</div>
     <div class="mt-1 flex items-center gap-2">
@@ -71,10 +69,8 @@
   {#if github.mostStarred}
     <HeroCard
       class="absolute bottom-[30%] left-[12%] animate-float-delayed"
-      onclick={() =>
-        document
-          .getElementById("projects")
-          ?.scrollIntoView({ behavior: "smooth" })}
+      href="https://github.com/adriankarlen/{github.mostStarred.name}"
+      target="_blank"
     >
       <div class="text-xs font-medium text-text-sub">Most starred</div>
       <div class="mt-1 flex items-center gap-2">
