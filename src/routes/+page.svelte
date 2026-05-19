@@ -1,11 +1,43 @@
-<div
-  class="flex flex-col justify-center px-10 m-auto w-full text-5xl font-black md:text-7xl lg:text-8xl 2xl:w-2/3"
->
-  <h1 class="animate-enter">
-    Hi, my name is <span class="text-rp-love">Adrian</span>.
-  </h1>
-  <h1 class="animate-enter" style="--stagger: 1;">
-    I'm a <span class="text-rp-rose">full stack developer</span> from
-    <span class="text-rp-pine">Stockholm</span>.
-  </h1>
+<script lang="ts">
+  import { hashScroll } from "$lib/hash-scroll";
+  import PillNav from "../components/PillNav.svelte";
+  import Hero from "../components/Hero.svelte";
+  import MeshBackground from "../components/MeshBackground.svelte";
+  import ProjectShowcase from "../components/ProjectShowcase.svelte";
+  import StackPills from "../components/StackPills.svelte";
+  import AboutSection from "../components/AboutSection.svelte";
+  import ContactSection from "../components/ContactSection.svelte";
+
+  let { data } = $props();
+
+  let activeSection = $state("hero");
+
+  function handleScroll() {
+    const sections = ["hero", "projects", "stack", "about", "contact"];
+    for (const id of sections) {
+      const el = document.getElementById(id);
+      if (el) {
+        const rect = el.getBoundingClientRect();
+        if (rect.top <= window.innerHeight / 2 && rect.bottom > 0) {
+          activeSection = id;
+        }
+      }
+    }
+  }
+</script>
+
+<svelte:window onscroll={handleScroll} />
+
+<div use:hashScroll={["projects", "stack", "about", "contact"]}>
+  <MeshBackground {activeSection} />
+  <PillNav />
+
+  <div id="hero">
+    <Hero github={data.github} />
+  </div>
+
+  <ProjectShowcase />
+  <StackPills />
+  <AboutSection />
+  <ContactSection />
 </div>
