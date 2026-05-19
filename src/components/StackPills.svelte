@@ -6,24 +6,12 @@
     "Svelte",
     "React",
     ".NET",
-    "PHP",
     "Tailwind CSS",
     "Node.js",
-    "SvelteKit",
-    "Next.js",
-    "PostgreSQL",
-    "Docker",
-    "Git",
     "Lua",
     "CSS",
     "HTML"
   ];
-
-  function scatter(i: number) {
-    const rot = ((i * 7 + 3) % 7) - 3;
-    const y = ((i * 5 + 2) % 9) - 4;
-    return `transform: rotate(${rot}deg) translateY(${y}px);`;
-  }
 </script>
 
 <section id="stack" class="mx-auto max-w-3xl px-6 py-24">
@@ -35,11 +23,13 @@
     Stack
   </h2>
 
-  <div class="reveal flex flex-wrap justify-center gap-3" use:intersect>
-    {#each stack as tool, i}
+  <div
+    class="reveal grid grid-cols-2 gap-x-12 gap-y-4 sm:grid-cols-3"
+    use:intersect
+  >
+    {#each stack as tool}
       <span
-        class="rounded-full border border-card-border bg-card-bg px-4 py-2 text-sm font-medium text-text shadow-sm backdrop-blur-sm"
-        style={scatter(i)}
+        class="border-b border-dashed border-text/30 pb-3 text-base font-medium text-text"
       >
         {tool}
       </span>
