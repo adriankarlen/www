@@ -7,6 +7,7 @@
     github: {
       commitsThisWeek: number;
       latestRepo: { name: string; description: string | null } | null;
+      mostStarred: { name: string; stars: number } | null;
     };
   } = $props();
 </script>
@@ -66,4 +67,22 @@
       {/if}
     </div>
   </HeroCard>
+
+  {#if github.mostStarred}
+    <HeroCard
+      class="absolute bottom-[30%] left-[12%] animate-float-delayed"
+      onclick={() =>
+        document
+          .getElementById("projects")
+          ?.scrollIntoView({ behavior: "smooth" })}
+    >
+      <div class="text-xs font-medium text-text-sub">Most starred</div>
+      <div class="mt-1 flex items-center gap-2">
+        <span class="text-sm text-accent">★ {github.mostStarred.stars}</span>
+        <span class="text-sm font-medium text-text"
+          >{github.mostStarred.name}</span
+        >
+      </div>
+    </HeroCard>
+  {/if}
 </section>

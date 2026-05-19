@@ -21,7 +21,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
     const [eventsRes, reposRes] = await Promise.all([
       fetch(`https://api.github.com/users/${username}/events?per_page=100`),
       fetch(
-        `https://api.github.com/users/${username}/repos?sort=pushed&per_page=5`
+        `https://api.github.com/users/${username}/repos?per_page=100`
       )
     ]);
 
@@ -37,27 +37,43 @@ export const load: PageServerLoad = async ({ fetch }) => {
     }
 
     let latestRepo: { name: string; description: string | null } | null = null;
+    let mostStarred: { name: string; stars: number } | null = null;
     if (reposRes.ok) {
       const repos: GitHubRepo[] = await reposRes.json();
       if (repos.length > 0) {
+        const sorted = [...repos].sort(
+          (a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime()
+        );
         latestRepo = {
-          name: repos[0].name,
-          description: repos[0].description
+          name: sorted[0].name,
+          description: sorted[0].description
         };
+
+        const starred = [...repos].sort(
+          (a, b) => b.stargazers_count - a.stargazers_count
+        );
+        if (starred[0].stargazers_count > 0) {
+          mostStarred = {
+            name: starred[0].name,
+            stars: starred[0].stargazers_count
+          };
+        }
       }
     }
 
     return {
       github: {
         commitsThisWeek,
-        latestRepo
+        latestRepo,
+        mostStarred
       }
     };
   } catch {
     return {
       github: {
         commitsThisWeek: 0,
-        latestRepo: null
+        latestRepo: null,
+        mostStarred: null
       }
     };
   }
