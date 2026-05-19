@@ -20,9 +20,7 @@ export const load: PageServerLoad = async ({ fetch }) => {
   try {
     const [eventsRes, reposRes] = await Promise.all([
       fetch(`https://api.github.com/users/${username}/events?per_page=100`),
-      fetch(
-        `https://api.github.com/users/${username}/repos?per_page=100`
-      )
+      fetch(`https://api.github.com/users/${username}/repos?per_page=100`)
     ]);
 
     let commitsThisWeek = 0;
@@ -42,7 +40,8 @@ export const load: PageServerLoad = async ({ fetch }) => {
       const repos: GitHubRepo[] = await reposRes.json();
       if (repos.length > 0) {
         const sorted = [...repos].sort(
-          (a, b) => new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime()
+          (a, b) =>
+            new Date(b.pushed_at).getTime() - new Date(a.pushed_at).getTime()
         );
         latestRepo = {
           name: sorted[0].name,

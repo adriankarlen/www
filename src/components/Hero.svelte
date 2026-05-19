@@ -13,15 +13,15 @@
 </script>
 
 <section
-  class="relative flex min-h-svh flex-col items-center justify-center px-6"
+  class="flex relative flex-col justify-center items-center px-6 min-h-svh"
 >
   <HeroCard
     class="absolute left-[8%] top-[20%] animate-float"
     href="https://github.com/adriankarlen"
     target="_blank"
   >
-    <div class="flex items-center gap-2 text-sm">
-      <span class="inline-block h-2 w-2 rounded-full bg-green-400"></span>
+    <div class="flex gap-2 items-center text-sm">
+      <span class="inline-block w-2 h-2 bg-green-400 rounded-full"></span>
       <span class="font-medium text-text"
         >{github.commitsThisWeek} commits this week</span
       >
@@ -30,32 +30,33 @@
   </HeroCard>
 
   <div class="text-center">
-    <h1 class="text-5xl font-light leading-tight text-text md:text-7xl">
+    <h1 class="text-5xl font-light leading-tight md:text-7xl text-text">
       Hi, I'm Adrian.
     </h1>
-    <h1 class="mt-2 text-5xl leading-tight text-text md:text-7xl">
+    <h1 class="mt-2 text-5xl font-light leading-tight md:text-7xl text-text">
       I
       {#each "build".split("") as char, i}
         <span
-          class="hero-keyword font-display inline-block"
+          class="inline-block hero-keyword font-display"
           style="animation-delay: {i * 0.15}s;"
         >
           {char}
         </span>
       {/each}
     </h1>
-    <h1 class="mt-2 text-5xl font-light leading-tight text-text md:text-7xl">
+    <h1 class="mt-2 text-5xl font-light leading-tight md:text-7xl text-text">
       things for the web.
     </h1>
   </div>
 
   <HeroCard
     class="absolute bottom-[22%] right-[10%] animate-float-delayed"
-    href="https://github.com/adriankarlen/{github.latestRepo?.name ?? 'textfox'}"
+    href="https://github.com/adriankarlen/{github.latestRepo?.name ??
+      'textfox'}"
     target="_blank"
   >
     <div class="text-xs font-medium text-text-sub">Latest project</div>
-    <div class="mt-1 flex items-center gap-2">
+    <div class="flex gap-2 items-center mt-1">
       {#if github.latestRepo}
         <span class="text-sm font-medium text-text"
           >{github.latestRepo.name}</span
@@ -73,7 +74,7 @@
       target="_blank"
     >
       <div class="text-xs font-medium text-text-sub">Most starred</div>
-      <div class="mt-1 flex items-center gap-2">
+      <div class="flex gap-2 items-center mt-1">
         <span class="text-sm text-accent">★ {github.mostStarred.stars}</span>
         <span class="text-sm font-medium text-text"
           >{github.mostStarred.name}</span

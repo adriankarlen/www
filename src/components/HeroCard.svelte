@@ -22,7 +22,12 @@
 </script>
 
 {#if href}
-  <a {href} {target} rel="noopener noreferrer" class="{baseClass} {interactiveClass} {className}">
+  <a
+    {href}
+    {target}
+    rel="noopener noreferrer"
+    class="{baseClass} {interactiveClass} {className}"
+  >
     {@render children()}
   </a>
 {:else if onclick}
