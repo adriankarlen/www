@@ -3,7 +3,7 @@
 - [x] 1.1 Rewrite `src/app.css` — new color system (CSS custom properties), import Fraunces + DM Sans from Google Fonts, remove Rosé Pine palette, remove DM Mono, define mesh gradient blob base styles, define Tailwind v4 `@theme` with new tokens
 - [x] 1.2 Create Svelte action `src/lib/intersect.ts` — Intersection Observer action for scroll-driven reveals (adds `.visible` class)
 - [x] 1.3 Create Svelte action `src/lib/hash-scroll.ts`
- — updates URL hash as user scrolls past section boundaries
+      — updates URL hash as user scrolls past section boundaries
 
 ## 2. Layout & Navigation
 

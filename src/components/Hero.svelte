@@ -1,5 +1,14 @@
 <script lang="ts">
   import HeroCard from "./HeroCard.svelte";
+
+  let {
+    github
+  }: {
+    github: {
+      commitsThisWeek: number;
+      latestRepo: { name: string; description: string | null } | null;
+    };
+  } = $props();
 </script>
 
 <section
@@ -12,7 +21,9 @@
   >
     <div class="flex items-center gap-2 text-sm">
       <span class="inline-block h-2 w-2 rounded-full bg-green-400"></span>
-      <span class="font-medium text-text">12 commits this week</span>
+      <span class="font-medium text-text"
+        >{github.commitsThisWeek} commits this week</span
+      >
     </div>
     <div class="mt-1 text-xs text-text-sub">github.com/adriankarlen</div>
   </HeroCard>
@@ -46,12 +57,13 @@
   >
     <div class="text-xs font-medium text-text-sub">Latest project</div>
     <div class="mt-1 flex items-center gap-2">
-      <img
-        src="/projects/textfox.png"
-        alt="textfox"
-        class="h-10 w-14 rounded object-cover object-top"
-      />
-      <span class="text-sm font-medium text-text">textfox</span>
+      {#if github.latestRepo}
+        <span class="text-sm font-medium text-text"
+          >{github.latestRepo.name}</span
+        >
+      {:else}
+        <span class="text-sm font-medium text-text">textfox</span>
+      {/if}
     </div>
   </HeroCard>
 </section>

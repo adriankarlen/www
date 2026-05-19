@@ -8,6 +8,8 @@
   import AboutSection from "../components/AboutSection.svelte";
   import ContactSection from "../components/ContactSection.svelte";
 
+  let { data } = $props();
+
   let activeSection = $state("hero");
 
   function handleScroll() {
@@ -31,7 +33,7 @@
   <PillNav />
 
   <div id="hero">
-    <Hero />
+    <Hero github={data.github} />
   </div>
 
   <ProjectShowcase />
