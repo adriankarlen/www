@@ -6,7 +6,7 @@
     link?: string;
     children: Snippet;
   }
-  let { link, children, ...rest }: ButtonProps = $props();
+  let { link, children, class: className, onclick }: ButtonProps = $props();
 </script>
 
 {#if link}
@@ -24,8 +24,8 @@
     class={`md:border-2 md:border-rp-text md:dark:border-rp-highlight-low h-8 w-8 md:h-10 md:w-10
             md:shadow-nb-light md:dark:shadow-nb md:transition-all md:hover:translate-x-boxShadowX
             md:hover:translate-y-boxShadowY md:hover:shadow-none md:hover:translate-x-[4px]
-            md:hover:translate-y-[4px] ${rest.class}`}
-    onclick={rest.onclick}
+            md:hover:translate-y-[4px] ${className}`}
+    {onclick}
   >
     {@render children()}
   </button>

@@ -7,17 +7,27 @@
     objectPosition?: "object-top" | "object-center" | "object-bottom";
     children: Snippet;
     class?: string;
-  };
-  let { imageUrl, alt, objectPosition, children, ...rest }: CardProps = $props();
+  }
+  let {
+    imageUrl,
+    alt,
+    objectPosition,
+    children,
+    class: className
+  }: CardProps = $props();
 </script>
 
 <figure
-  class="w-full overflow-hidden rounded-base border-2 border-rp-text dark:border-rp-highlight-low bg-rp-overlay shadow-nb-light dark:shadow-nb {rest.class}"
+  class="w-full overflow-hidden rounded-base border-2 border-rp-text dark:border-rp-highlight-low bg-rp-overlay shadow-nb-light dark:shadow-nb {className}"
 >
-  <img class="w-full md:h-72 h-36 object-cover {objectPosition ?? "object-center"}" src={imageUrl} {alt} />
+  <img
+    class="w-full md:h-72 h-36 object-cover {objectPosition ?? 'object-center'}"
+    src={imageUrl}
+    {alt}
+  />
   <figcaption
     class="border-t-2 border-rp-highlight-low p-4 text-rp-subtle font-semibold"
   >
-  {@render children()}
+    {@render children()}
   </figcaption>
 </figure>

@@ -35,12 +35,13 @@ cd www
 3. Install dependencies
 
 ```bash
-bun install 
+bun install
 ```
+
 4. Start the development server
 
 ```bash
-bun run dev 
+bun run dev
 ```
 
 ## 📜 License
