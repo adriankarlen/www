@@ -70,7 +70,7 @@
           <img
             src={project.image}
             alt={project.name}
-            class="h-auto w-full object-cover object-top"
+            class="aspect-video w-full object-cover object-top"
           />
         </a>
         <div class={i % 2 === 0 ? "md:col-span-2" : "md:col-span-2 md:order-1"}>
