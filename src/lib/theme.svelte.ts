@@ -9,30 +9,30 @@ function getInitialTheme(): Theme {
   return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
 }
 
-let current: Theme = $state(getInitialTheme());
+const theme = $state({ current: getInitialTheme() });
 
-function apply(theme: Theme) {
-  document.documentElement.setAttribute("data-theme", theme);
+function apply(t: Theme) {
+  document.documentElement.setAttribute("data-theme", t);
 }
 
 if (browser) {
-  apply(current);
+  apply(theme.current);
 
   const mq = matchMedia("(prefers-color-scheme: dark)");
   mq.addEventListener("change", (e) => {
     if (!localStorage.getItem("theme")) {
-      current = e.matches ? "dark" : "light";
-      apply(current);
+      theme.current = e.matches ? "dark" : "light";
+      apply(theme.current);
     }
   });
 }
 
 export function toggle() {
-  current = current === "light" ? "dark" : "light";
-  apply(current);
-  localStorage.setItem("theme", current);
+  theme.current = theme.current === "light" ? "dark" : "light";
+  apply(theme.current);
+  localStorage.setItem("theme", theme.current);
 }
 
 export function getTheme(): Theme {
-  return current;
+  return theme.current;
 }
