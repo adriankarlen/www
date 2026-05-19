@@ -31,21 +31,19 @@
 
   <div class="text-center">
     <h1 class="text-5xl font-light leading-tight md:text-7xl text-text">
-      Hi, I'm Adrian.
-    </h1>
-    <h1 class="mt-2 text-5xl font-light leading-tight md:text-7xl text-text">
-      I
-      {#each "build".split("") as char, i}
-        <span
-          class="inline-block hero-keyword font-display"
-          style="animation-delay: {i * 0.15}s;"
-        >
-          {char}
-        </span>
-      {/each}
-    </h1>
-    <h1 class="mt-2 text-5xl font-light leading-tight md:text-7xl text-text">
-      things for the web.
+      <span class="block">Hi, I'm Adrian.</span>
+      <span class="block mt-2">
+        I
+        {#each "build".split("") as char, i}
+          <span
+            class="inline-block hero-keyword font-display"
+            style="animation-delay: {i * 0.15}s;"
+          >
+            {char}
+          </span>
+        {/each}
+      </span>
+      <span class="block mt-2">things for the web.</span>
     </h1>
   </div>
 

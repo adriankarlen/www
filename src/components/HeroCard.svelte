@@ -18,7 +18,7 @@
   const baseClass =
     "rounded-xl border border-card-border bg-card-bg px-4 py-3 shadow-sm backdrop-blur-xl transition-transform";
 
-  const interactiveClass = "cursor-pointer hover:scale-105";
+  const interactiveClass = "cursor-pointer hover:scale-105 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent";
 </script>
 
 {#if href}

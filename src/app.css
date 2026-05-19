@@ -42,6 +42,7 @@ layer(base);
 }
 
 [data-theme="dark"] {
+  color-scheme: dark;
   --bg: #0f0d2e;
   --bg-alt: #16133a;
   --text: #f0ede8;
@@ -59,8 +60,10 @@ layer(base);
   background: color-mix(in srgb, var(--accent) 20%, transparent);
 }
 
-html {
-  scroll-behavior: smooth;
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 body {

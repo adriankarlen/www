@@ -70,6 +70,9 @@
           <img
             src={project.image}
             alt={project.name}
+            width="768"
+            height="432"
+            loading="lazy"
             class="aspect-video w-full object-cover object-top"
           />
         </a>

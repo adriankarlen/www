@@ -1,5 +1,6 @@
 <script lang="ts">
   import { hashScroll } from "$lib/hash-scroll";
+  import { onMount } from "svelte";
   import PillNav from "../components/PillNav.svelte";
   import Hero from "../components/Hero.svelte";
   import MeshBackground from "../components/MeshBackground.svelte";
@@ -12,21 +13,24 @@
 
   let activeSection = $state("hero");
 
-  function handleScroll() {
-    const sections = ["hero", "projects", "stack", "about", "contact"];
-    for (const id of sections) {
-      const el = document.getElementById(id);
-      if (el) {
-        const rect = el.getBoundingClientRect();
-        if (rect.top <= window.innerHeight / 2 && rect.bottom > 0) {
-          activeSection = id;
+  onMount(() => {
+    const sections = document.querySelectorAll<HTMLElement>(
+      "#hero, #projects, #stack, #about, #contact"
+    );
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) {
+            activeSection = entry.target.id;
+          }
         }
-      }
-    }
-  }
+      },
+      { rootMargin: "-50% 0px -50% 0px" }
+    );
+    sections.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  });
 </script>
-
-<svelte:window onscroll={handleScroll} />
 
 <div use:hashScroll={["projects", "stack", "about", "contact"]}>
   <MeshBackground {activeSection} />
