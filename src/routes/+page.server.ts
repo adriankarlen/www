@@ -14,13 +14,32 @@ interface GitHubRepo {
   stargazers_count: number;
 }
 
-export const load: PageServerLoad = async ({ fetch }) => {
+export interface GitHubData {
+  commitsThisWeek: number;
+  latestRepo: { name: string; description: string | null } | null;
+  mostStarred: { name: string; stars: number } | null;
+}
+
+const EMPTY: GitHubData = {
+  commitsThisWeek: 0,
+  latestRepo: null,
+  mostStarred: null
+};
+
+async function fetchGitHub(
+  fetch: typeof globalThis.fetch
+): Promise<GitHubData> {
   const username = "adriankarlen";
 
   try {
+    const signal = AbortSignal.timeout(2500);
     const [eventsRes, reposRes] = await Promise.all([
-      fetch(`https://api.github.com/users/${username}/events?per_page=100`),
-      fetch(`https://api.github.com/users/${username}/repos?per_page=100`)
+      fetch(`https://api.github.com/users/${username}/events?per_page=100`, {
+        signal
+      }),
+      fetch(`https://api.github.com/users/${username}/repos?per_page=100`, {
+        signal
+      })
     ]);
 
     let commitsThisWeek = 0;
@@ -34,8 +53,8 @@ export const load: PageServerLoad = async ({ fetch }) => {
       ).length;
     }
 
-    let latestRepo: { name: string; description: string | null } | null = null;
-    let mostStarred: { name: string; stars: number } | null = null;
+    let latestRepo: GitHubData["latestRepo"] = null;
+    let mostStarred: GitHubData["mostStarred"] = null;
     if (reposRes.ok) {
       const repos: GitHubRepo[] = await reposRes.json();
       if (repos.length > 0) {
@@ -60,20 +79,21 @@ export const load: PageServerLoad = async ({ fetch }) => {
       }
     }
 
-    return {
-      github: {
-        commitsThisWeek,
-        latestRepo,
-        mostStarred
-      }
-    };
+    return { commitsThisWeek, latestRepo, mostStarred };
   } catch {
-    return {
-      github: {
-        commitsThisWeek: 0,
-        latestRepo: null,
-        mostStarred: null
-      }
-    };
+    return EMPTY;
   }
+}
+
+export const load: PageServerLoad = ({ fetch, setHeaders }) => {
+  // cache at CDN for 1h, serve stale up to 1d while revalidating
+  setHeaders({
+    "cache-control":
+      "public, max-age=0, s-maxage=3600, stale-while-revalidate=86400"
+  });
+
+  // top-level promise — streamed by SvelteKit 2, does not block initial HTML
+  return {
+    github: fetchGitHub(fetch)
+  };
 };
