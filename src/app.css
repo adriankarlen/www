@@ -1,5 +1,23 @@
 @import "tailwindcss";
 
+/* Self-hosted variable fonts (latin subset) — same-origin, no render-blocking
+   cross-origin request. swap = paint fallback immediately, swap when loaded. */
+@font-face {
+  font-family: "DM Sans";
+  font-style: normal;
+  font-weight: 100 1000;
+  font-display: swap;
+  src: url("/fonts/dm-sans-latin-var.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Fraunces";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: swap;
+  src: url("/fonts/fraunces-latin-var.woff2") format("woff2");
+}
+
 @theme {
   --color-bg: var(--bg);
   --color-bg-alt: var(--bg-alt);
@@ -79,12 +97,9 @@ body {
 .mesh-blob {
   position: absolute;
   border-radius: 50%;
-  filter: blur(120px);
   pointer-events: none;
-  will-change: transform, opacity;
-  transition:
-    opacity 1s ease,
-    transform 1.5s ease;
+  will-change: opacity;
+  transition: opacity 1s ease;
 }
 
 /* Variable font animation */
