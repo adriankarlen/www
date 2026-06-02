@@ -5,13 +5,13 @@
     {
       name: "textfox",
       description: "A minimal, text-based Firefox CSS theme.",
-      image: "/projects/textfox.png",
+      image: "/projects/textfox.webp",
       url: "https://github.com/adriankarlen/textfox"
     },
     {
       name: "neobrutal zebar",
       description: "A neobrutalist-inspired status bar for Zebar.",
-      image: "/projects/neobrutal-zebar.png",
+      image: "/projects/neobrutal-zebar.webp",
       url: "https://github.com/adriankarlen/neobrutal-zebar"
     },
     {
@@ -23,19 +23,19 @@
     {
       name: "bar.wezterm",
       description: "A configurable status bar plugin for WezTerm.",
-      image: "/projects/wezterm-bar.png",
+      image: "/projects/wezterm-bar.webp",
       url: "https://github.com/adriankarlen/bar.wezterm"
     },
     {
       name: "adriankarlen.dev",
       description: "This portfolio site — built with SvelteKit and Tailwind.",
-      image: "/projects/this-site.png",
+      image: "/projects/this-site.webp",
       url: "https://github.com/adriankarlen/www"
     },
     {
       name: "rosé pine zebar",
       description: "A Rosé Pine themed status bar for Zebar.",
-      image: "/projects/rose-pine-zebar.png",
+      image: "/projects/rose-pine-zebar.webp",
       url: "https://github.com/adriankarlen/rose-pine.zebar"
     }
   ];
